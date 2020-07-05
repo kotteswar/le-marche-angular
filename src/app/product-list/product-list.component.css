@@ -10,3 +10,11 @@
 .filter__item {
     border-top: none;
 }
+
+.hero__categories__all:after {
+    display: none;
+}
+
+
+
+

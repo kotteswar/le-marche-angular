@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { OwlModule } from 'ngx-owl-carousel';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +11,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-import { OwlModule } from 'ngx-owl-carousel';
 import { FooterComponent } from './footer/footer.component';
+import { ApiServiceService } from './api-service.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,11 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    OwlModule,
+    HttpClientModule,
+    InfiniteScrollModule
   ],
-  providers: [],
+  providers: [ApiServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

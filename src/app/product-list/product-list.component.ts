@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, HostListener } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -7,76 +7,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  productList = []
+  public productList = [];
+  public allProducts = [];
+  public notEmptyPost = true;
+  public notScrolly = true;
 
-  constructor() { }
+  constructor(private apiService: ApiServiceService) { }
 
   ngOnInit() {
 
-
-    this.productList = [
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-1.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-2.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-3.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-4.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-5.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-6.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-7.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-8.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-9.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-10.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-11.jpg',
-        price: '$30.00'
-      },
-      {
-        prodName: 'Crab Pool Security',
-        prodImg: 'assets/img/product/product-12.jpg',
-        price: '$30.00'
-      }
-    ]
+    this.getProducts();
+    window.addEventListener('scroll', this.scrollHandler.bind(this), false);
 
   }
+
+  public getProducts() {
+    this.apiService.getProducts().subscribe((res) => {
+        console.log(res);
+        this.allProducts = res['Sheet1'];
+        console.log(this.allProducts);
+        this.productList = this.allProducts.slice(0, 6);
+        console.log(this.productList, this.allProducts);
+    }, err => {
+      console.log(err);
+    });
+  }
+
+  public onScroll() {
+
+    if (this.notEmptyPost && this.notScrolly) {
+        this.notScrolly = false;
+    }
+
+  }
+
+  public loadProducts() {
+    this.allProducts.slice(0, 6).forEach((item) => {
+        this.productList.push(item);
+    });
+    console.log(this.allProducts);
+  }
+
+  public scrollHandler() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    if (scrolled === scrollable) {
+      console.log('you have reached the bottom');
+      this.loadProducts();
+    }
+  }
+
+
+
+
 
 }
