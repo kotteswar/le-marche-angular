@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { OwlModule } from 'ngx-owl-carousel';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { ApiServiceService } from './api-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { ApiServiceService } from './api-service.service';
     AppRoutingModule,
     OwlModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]

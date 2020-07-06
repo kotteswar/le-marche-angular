@@ -26,6 +26,31 @@
                   <div class="hero__categories__all">
                       <span>All Categories</span>
                   </div>
+
+                  <section class="example-section">
+                    <div *ngFor="let item of categoryArr;">
+                        <span class="example-list-section">
+                            <mat-checkbox class="example-margin"
+                                [value]="item.main_category"
+                                [checked]="item.checked"
+                                (change)="selectAll($event)">
+                                {{item.main_category}}
+                            </mat-checkbox>
+                        </span>
+                        <span class="example-list-section">
+                            <ul>
+                                <li *ngFor="let subItem of item.sub_category"
+                                    >
+                                    <mat-checkbox [value]="subItem.name" 
+                                        [checked]="subItem.checked" 
+                                        (change)="selectSingle($event)">
+                                        {{subItem.name}}
+                                    </mat-checkbox>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                  </section>
                   
               </div>
           </div>
