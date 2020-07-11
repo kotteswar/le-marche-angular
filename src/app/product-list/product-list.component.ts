@@ -12,6 +12,8 @@ export class ProductListComponent implements OnInit {
   public notEmptyPost = true;
   public notScrolly = true;
   public categoryArr = [];
+  public allDataCopy = [];
+  public subCateArr = [];
 
   constructor(private apiService: ApiServiceService) { }
 
@@ -23,8 +25,11 @@ export class ProductListComponent implements OnInit {
   }
 
   public getProducts() {
+    this.categoryArr = [];
+   
     this.apiService.getProducts().subscribe((res) => {
         this.allProducts = res['Sheet1'];
+        this.allDataCopy = JSON.parse(JSON.stringify(this.allProducts));
         this.productList = this.allProducts.slice(0, 6);
         let catArr = [];
         const categoryObj = {
@@ -57,8 +62,8 @@ export class ProductListComponent implements OnInit {
           this.categoryArr.forEach((subItem) => {
             if (subItem.main_category === item.main_category) {
 
-              if (subItem.sub_category.indexOf(item.sub_category) === -1) {
-                subItem.sub_category.push(item.sub_category);
+              if (subItem.sub_category.indexOf(item.sub_name_french) === -1) {
+                subItem.sub_category.push(item.sub_name_french);
               }
 
             }
@@ -105,7 +110,8 @@ export class ProductListComponent implements OnInit {
   }
 
   public selectAll(event) {
-      console.log(event);
+      console.log(event, event.source.value, this.allProducts);
+      this.allProducts = this.allDataCopy;
       if (event.checked) {
 
         this.categoryArr.forEach((item) => {
@@ -115,6 +121,13 @@ export class ProductListComponent implements OnInit {
             });
           }
         });
+
+        this.allProducts = this.allProducts.filter((item) => {
+              return item.main_category === event.source.value;
+        });
+        this.productList = this.allProducts.slice(0, 6);
+
+        console.log(this.allProducts);
 
       } else {
 
@@ -126,13 +139,18 @@ export class ProductListComponent implements OnInit {
           }
         });
 
+        this.getProducts();
+        console.log(this.allProducts);
+
       }
-      
   }
 
   public selectSingle(event) {
     console.log(event);
     let allCheckUncheck;
+    this.allProducts = this.allDataCopy;
+    console.log(this.allProducts);
+
     if (event.checked === true) {
       this.categoryArr.forEach((item) => {
           item.sub_category.forEach((subItem) => {
@@ -148,7 +166,15 @@ export class ProductListComponent implements OnInit {
             item.checked = true;
           }
       });
+      this.subCateArr.push(event.source.value);
+      console.log(this.subCateArr);
+
     } else if (event.checked === false) {
+
+      const index = this.subCateArr.indexOf(event.source.value);
+
+      this.subCateArr.splice(index, 1);
+      console.log(this.subCateArr);
 
       this.categoryArr.forEach((item) => {
         item.sub_category.forEach((subItem) => {
@@ -166,7 +192,18 @@ export class ProductListComponent implements OnInit {
       });
 
     }
-    console.log(this.categoryArr);
+
+    this.allProducts = this.allProducts.reduce((acc, curr) => {
+        if ( this.subCateArr.includes(curr.sub_name_french)) {
+          acc.push(curr);
+        }
+        console.log(acc);
+        return acc;
+    }, []);
+
+    this.productList = this.allProducts.slice(0, 6);
+
+    console.log(this.categoryArr, this.allProducts);
   }
 
 
