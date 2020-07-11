@@ -110,17 +110,20 @@ export class ProductListComponent implements OnInit {
   }
 
   public selectAll(event) {
-      console.log(event, event.source.value, this.allProducts);
+      console.log(event, event.source.value, this.allProducts, this.categoryArr);
       this.allProducts = this.allDataCopy;
       if (event.checked) {
 
         this.categoryArr.forEach((item) => {
           if (event.source.value === item.main_category) {
+            item.checked = true;
             item.sub_category.forEach((subItem) => {
               subItem.checked = true;
+              this.subCateArr.push(subItem.name);
             });
           }
         });
+        console.log(this.subCateArr);
 
         this.allProducts = this.allProducts.filter((item) => {
               return item.main_category === event.source.value;
@@ -133,8 +136,10 @@ export class ProductListComponent implements OnInit {
 
         this.categoryArr.forEach((item) => {
           if (event.source.value === item.main_category) {
+            item.checked = false;
             item.sub_category.forEach((subItem) => {
               subItem.checked = false;
+              this.subCateArr = [];
             });
           }
         });
@@ -186,10 +191,14 @@ export class ProductListComponent implements OnInit {
             return subItem.checked === true;
         });
         console.log(allCheckUncheck);
+        console.log(!allCheckUncheck);
+        console.log(item);
         if (!allCheckUncheck) {
           item.checked = false;
         }
       });
+      this.categoryArr = this.categoryArr;
+      console.log(this.categoryArr);
 
     }
 
@@ -197,9 +206,12 @@ export class ProductListComponent implements OnInit {
         if ( this.subCateArr.includes(curr.sub_name_french)) {
           acc.push(curr);
         }
-        console.log(acc);
         return acc;
     }, []);
+
+    if (this.subCateArr.length === 0) {
+      this.allProducts = this.allDataCopy;
+    }
 
     this.productList = this.allProducts.slice(0, 6);
 
