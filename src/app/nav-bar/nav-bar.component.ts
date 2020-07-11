@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  public openMenuParam:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public openMenu() {
+    console.log('opening')
+    this.openMenuParam = true;
+
   }
 
 }

@@ -1,10 +1,10 @@
  <!-- Humberger Begin -->
- <div class="humberger__menu__overlay"></div>
- <div class="humberger__menu__wrapper">
+ <div class="humberger__menu__overlay" [ngClass]="{'visibility_visible': openMenuParam}"></div>
+ <div class="humberger__menu__wrapper" [ngClass]="{'visible_menu': openMenuParam}">
      <div class="humberger__menu__logo">
          <a href="#"><img src="assets/img/logo.png" alt=""></a>
      </div>
-     <nav class="humberger__menu__nav mobile-menu">
+     <nav class="humberger__menu__nav mobile-menu" [ngClass]="{'d-block': openMenuParam}">
          <ul>
              <li class="active"><a href="./index.html">Home</a></li>
              <li><a href="./shop-grid.html">Shop</a></li>
@@ -68,8 +68,8 @@
                  </nav>
              </div>
          </div>
-         <div class="humberger__open">
-             <i class="fa fa-bars"></i>
+         <div class="humberger__open" (click)="openMenu()">
+             <img src="assets/img/icons/grey-open-menu.svg" />
          </div>
      </div>
  </header>
