@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,17 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  public openMenuParam:boolean = false;
+  public openMenuParam: boolean = false;
+  public liked;
+  public shopped;
+  public likedLength;
+  public shoppedLength;
 
-  constructor() { }
+  constructor(private apiService: ApiServiceService) {
+
+    this.apiService.getLiked().subscribe((res) => {
+      console.log(res);
+      this.liked = res.liked;
+      this.likedLength = this.liked.length;
+    });
+
+    this.apiService.getShopped().subscribe((res) => {
+        console.log(res);
+        this.shopped = res.shopped;
+        this.shoppedLength = this.shopped.length;
+    });
+  }
 
   ngOnInit() {
+    this.liked = JSON.parse(localStorage.getItem('liked'));
+    this.likedLength = this.liked.length;
+    this.shopped = JSON.parse(localStorage.getItem('shopped'));
+    this.shoppedLength = this.shopped.length;
   }
+
 
   public openMenu() {
     console.log('opening')
     this.openMenuParam = true;
 
   }
+
+  public closeMobileMenu() {
+    this.openMenuParam = false;
+  }
+
 
 }

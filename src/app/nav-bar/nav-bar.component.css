@@ -15,12 +15,50 @@
     opacity: 1 !important;
 }
 
+.nav_icon {
+    width: 100px;
+    max-width: 25px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.number-count {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    background-color: #ff1b00;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+}
+
 @media only screen and (max-width: 767px) {
     .humberger__open {
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 4px;
     }   
+    .humberger__menu__logo {
+        width: 100px;
+        margin: 0 auto; 
+    }
+    .humberger__menu__nav ul {
+        margin-top: 10px;
+    }
+    .humberger__menu__nav ul li {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .humberger__menu__nav ul li a {
+        color: #333;
+    }
 }
 
 

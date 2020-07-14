@@ -14,8 +14,12 @@ export class ProductListComponent implements OnInit {
   public categoryArr = [];
   public allDataCopy = [];
   public subCateArr = [];
+  public likedArray = [];
+  public shoppedArray = [];
 
-  constructor(private apiService: ApiServiceService) { }
+  constructor(private apiService: ApiServiceService) {
+    
+  }
 
   ngOnInit() {
 
@@ -26,10 +30,37 @@ export class ProductListComponent implements OnInit {
 
   public getProducts() {
     this.categoryArr = [];
-   
     this.apiService.getProducts().subscribe((res) => {
         this.allProducts = res['Sheet1'];
+        this.allProducts = this.allProducts.map((item) => {
+            return {
+              ...item,
+              liked: false,
+              shopped: false
+            }
+        });
+        console.log(this.allProducts);
+        const likedFromLocal = JSON.parse(localStorage.getItem('liked'));
+        const shoppedFromLocal = JSON.parse(localStorage.getItem('shopped'));
+        this.likedArray = likedFromLocal;
+        this.shoppedArray = shoppedFromLocal;
+        this.allProducts.forEach((item) => {
+          shoppedFromLocal.forEach((subItem) => {
+                if (subItem.product_id === item.product_id) {
+                    item.shopped = true;
+                }
+          });
+        });
+        this.allProducts.forEach((item) => {
+          likedFromLocal.forEach((subItem) => {
+                if (subItem.product_id === item.product_id) {
+                    item.liked = true;
+                }
+          });
+        });
+        console.log(likedFromLocal, shoppedFromLocal, this.allProducts);
         this.allDataCopy = JSON.parse(JSON.stringify(this.allProducts));
+        console.log(this.allDataCopy);
         this.productList = this.allProducts.slice(0, 6);
         let catArr = [];
         const categoryObj = {
@@ -219,7 +250,64 @@ export class ProductListComponent implements OnInit {
   }
 
 
+  public likeProduct(id) {
+    this.productList = this.productList.map((item) => {
+      let obj;
+      if (item.product_id === id) {
+        if (item.liked === false) {
+          obj = {
+            ...item,
+            liked: true
+          };
+          this.likedArray.push(item);
+        } else {
+          obj = {
+            ...item,
+            liked: false
+          };
+          this.likedArray.splice(this.likedArray.indexOf(item), 1);
+        }
+      } else {
+        obj = item;
+      }
+      return obj;
+    });
+    localStorage.setItem('liked', JSON.stringify(this.likedArray));
+    console.log(this.productList, this.likedArray);
+    this.apiService.sendLiked(JSON.parse(localStorage.getItem('liked')));
+  }
 
+  public shoppedProduct(id) {
+    this.productList = this.productList.map((item) => {
+      let obj;
+      if (item.product_id === id) {
+        if (item.shopped === false) {
+          obj = {
+            ...item,
+            shopped: true
+          };
+          this.shoppedArray.push(item);
+        } else {
+          obj = {
+            ...item,
+            shopped: false
+          };
+          this.shoppedArray.splice(this.shoppedArray.indexOf(item), 1);
+        }
+      } else {
+        obj = item;
+      }
+      return obj;
+    });
+    localStorage.setItem('shopped', JSON.stringify(this.shoppedArray));
+    this.apiService.sendShopped(JSON.parse(localStorage.getItem('shopped')));
+  }
+
+  public storageEvent() {
+    window.addEventListener('storage', (event) => {
+      console.log(event);
+    });
+  }
 
 
 }

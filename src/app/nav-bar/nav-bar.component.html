@@ -1,28 +1,26 @@
  <!-- Humberger Begin -->
- <div class="humberger__menu__overlay" [ngClass]="{'visibility_visible': openMenuParam}"></div>
+ <div class="humberger__menu__overlay" [ngClass]="{'visibility_visible': openMenuParam}" (click)="closeMobileMenu()"></div>
  <div class="humberger__menu__wrapper" [ngClass]="{'visible_menu': openMenuParam}">
      <div class="humberger__menu__logo">
          <a href="#"><img src="assets/img/logo.png" alt=""></a>
      </div>
      <nav class="humberger__menu__nav mobile-menu" [ngClass]="{'d-block': openMenuParam}">
          <ul>
-             <li class="active"><a href="./index.html">Home</a></li>
-             <li><a href="./shop-grid.html">Shop</a></li>
-             <li><a href="#">Pages</a>
+             <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
+             <li routerLinkActive="active"><a [routerLink]="['/products']">Shop</a></li>
+             <!-- <li><a href="#">Pages</a>
                  <ul class="header__menu__dropdown">
                      <li><a href="./shop-details.html">Shop Details</a></li>
                      <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                      <li><a href="./checkout.html">Check Out</a></li>
                      <li><a href="./blog-details.html">Blog Details</a></li>
                  </ul>
-             </li>
-             <li><a href="./blog.html">Blog</a></li>
-             <li><a href="./contact.html">Contact</a></li>
-             <li class="hero__search__phone__text"> 
-                <h5>+91 9080674229</h5>
-                <span>support 24/7 time</span>
-             </li>
+             </li> -->
+             <!-- <li><a href="./blog.html">Blog</a></li> -->
+             <li routerLinkActive="active"><a [routerLink]="['/contact']">Contact</a></li>
          </ul>
+         <h5>+91 9080674229</h5>
+         <span>support 24/7 time</span>
      </nav>
      <div id="mobile-menu-wrap"></div>
      <div class="header__top__right__social">
@@ -63,7 +61,23 @@
                              </ul>
                          </li> -->
                          <!-- <li><a href="./blog.html">Blog</a></li> -->
-                         <li routerLinkActive="active"><a [routerLink]="['/contact']">Contact</a></li>
+                         <li routerLinkActive="active">
+                             <a [routerLink]="['/contact']">Contact</a>
+                         </li>
+                         <li class="position-relative">
+                            
+                                <span *ngIf="likedLength" class="number-count"> {{likedLength}} </span>
+                                <img *ngIf="liked.length === 0" class="nav_icon"  src="assets/img/icons/green-heart-outline.svg" />
+                                <img *ngIf="liked.length > 0" class="nav_icon" src="assets/img/icons/green-heart-fill.svg" />
+                             
+                        </li>
+                         <li class="position-relative"> 
+                            
+                                <span *ngIf="shoppedLength" class="number-count"> {{shoppedLength}} </span>
+                                <img *ngIf="shopped.length === 0" class="nav_icon" src="assets/img/icons/green-shopping-outline.svg" />
+                                <img *ngIf="shopped.length > 0" class="nav_icon" src="assets/img/icons/green-shopping-cart.svg" />
+                            
+                        </li>
                      </ul>
                  </nav>
              </div>
