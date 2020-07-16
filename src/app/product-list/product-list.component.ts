@@ -40,25 +40,34 @@ export class ProductListComponent implements OnInit {
             }
         });
         console.log(this.allProducts);
-        const likedFromLocal = JSON.parse(localStorage.getItem('liked'));
-        const shoppedFromLocal = JSON.parse(localStorage.getItem('shopped'));
-        this.likedArray = likedFromLocal;
-        this.shoppedArray = shoppedFromLocal;
-        this.allProducts.forEach((item) => {
-          shoppedFromLocal.forEach((subItem) => {
-                if (subItem.product_id === item.product_id) {
-                    item.shopped = true;
-                }
+        if (localStorage.getItem('liked') !== null) {
+          const likedFromLocal = JSON.parse(localStorage.getItem('liked'));
+          this.likedArray = likedFromLocal;
+          this.allProducts.forEach((item) => {
+            likedFromLocal.forEach((subItem) => {
+                  if (subItem.product_id === item.product_id) {
+                      item.liked = true;
+                  }
+            });
           });
-        });
-        this.allProducts.forEach((item) => {
-          likedFromLocal.forEach((subItem) => {
-                if (subItem.product_id === item.product_id) {
-                    item.liked = true;
-                }
+        }
+
+        if (localStorage.getItem('shopped') !== null) {
+
+          const shoppedFromLocal = JSON.parse(localStorage.getItem('shopped'));
+          this.shoppedArray = shoppedFromLocal;
+
+          this.allProducts.forEach((item) => {
+            shoppedFromLocal.forEach((subItem) => {
+                  if (subItem.product_id === item.product_id) {
+                      item.shopped = true;
+                  }
+            });
           });
-        });
-        console.log(likedFromLocal, shoppedFromLocal, this.allProducts);
+
+        }
+
+
         this.allDataCopy = JSON.parse(JSON.stringify(this.allProducts));
         console.log(this.allDataCopy);
         this.productList = this.allProducts.slice(0, 6);
@@ -132,7 +141,7 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  public scrollHandler() {
+  public scrollHandler(event) {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
     if (scrolled === scrollable) {

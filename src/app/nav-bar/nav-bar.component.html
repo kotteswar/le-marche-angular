@@ -67,15 +67,15 @@
                          <li class="position-relative">
                             
                                 <span *ngIf="likedLength" class="number-count"> {{likedLength}} </span>
-                                <img *ngIf="liked.length === 0" class="nav_icon"  src="assets/img/icons/green-heart-outline.svg" />
-                                <img *ngIf="liked.length > 0" class="nav_icon" src="assets/img/icons/green-heart-fill.svg" />
+                                <img *ngIf="liked?.length === 0 || !liked" class="nav_icon"  src="assets/img/icons/green-heart-outline.svg" />
+                                <img *ngIf="liked?.length > 0" class="nav_icon" src="assets/img/icons/green-heart-fill.svg" />
                              
                         </li>
                          <li class="position-relative"> 
                             
                                 <span *ngIf="shoppedLength" class="number-count"> {{shoppedLength}} </span>
-                                <img *ngIf="shopped.length === 0" class="nav_icon" src="assets/img/icons/green-shopping-outline.svg" />
-                                <img *ngIf="shopped.length > 0" class="nav_icon" src="assets/img/icons/green-shopping-cart.svg" />
+                                <img *ngIf="shopped?.length === 0 || !shopped" class="nav_icon" src="assets/img/icons/green-shopping-outline.svg" />
+                                <img *ngIf="shopped?.length > 0" class="nav_icon" src="assets/img/icons/green-shopping-cart.svg" />
                             
                         </li>
                      </ul>

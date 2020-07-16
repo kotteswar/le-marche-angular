@@ -30,10 +30,20 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.liked = JSON.parse(localStorage.getItem('liked'));
-    this.likedLength = this.liked.length;
-    this.shopped = JSON.parse(localStorage.getItem('shopped'));
-    this.shoppedLength = this.shopped.length;
+    if (localStorage.getItem('liked') !== null) {
+
+      this.liked = JSON.parse(localStorage.getItem('liked'));
+      console.log(this.liked);
+      this.likedLength = this.liked.length;
+
+    }
+
+    if (localStorage.getItem('shopped') !== null) {
+      this.shopped = JSON.parse(localStorage.getItem('shopped'));
+      console.log(this.shopped);
+      this.shoppedLength = this.shopped.length;
+    }
+
   }
 
 

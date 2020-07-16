@@ -16,6 +16,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ApiServiceService } from './api-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LikedShoppedComponent } from './liked-shopped/liked-shopped.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductListComponent,
     ContactComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    LikedShoppedComponent
   ],
   imports: [
     BrowserModule,
