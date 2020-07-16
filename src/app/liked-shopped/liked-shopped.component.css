@@ -1,0 +1,57 @@
+.outer_table_wrapper {
+    padding-top: 1px;
+}
+
+.table_wrapper {
+    width: 85%;
+    margin: 20px auto;
+    padding-top: 0px;
+    overflow-x: auto;
+}
+
+.table_wrapper table {
+    width: 100%;
+}
+
+.table_icon {
+    width: 20px;
+    cursor: pointer;
+}
+
+.table_img_wrapper {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 1px 2px 1px #333;
+    border-radius: 5px;
+}
+
+.table_img_wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.table_wrapper table tr th {
+    padding: 10px;
+    background-color: #f06f30;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #f06f30;
+}
+
+.table_wrapper table tr td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #333;
+
+}
+
+.table_wrapper table tr td:first-child {
+    border-left: 1px solid #333;
+}
+
+.table_wrapper table tr td:last-child {
+    border-right: 1px solid #333;
+}
+
+
+

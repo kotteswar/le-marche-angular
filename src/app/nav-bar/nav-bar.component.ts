@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,7 +15,7 @@ export class NavBarComponent implements OnInit {
   public likedLength;
   public shoppedLength;
 
-  constructor(private apiService: ApiServiceService) {
+  constructor(private apiService: ApiServiceService, private router: Router) {
 
     this.apiService.getLiked().subscribe((res) => {
       console.log(res);
@@ -55,6 +56,10 @@ export class NavBarComponent implements OnInit {
 
   public closeMobileMenu() {
     this.openMenuParam = false;
+  }
+
+  public goToShopList(value) {
+    this.router.navigate(['/seleted-products/' + value]);
   }
 
 

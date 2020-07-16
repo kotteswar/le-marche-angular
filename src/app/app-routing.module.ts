@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { LikedShoppedComponent } from './liked-shopped/liked-shopped.component'
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'contact', component: ContactComponent
+  },
+  {
+    path: 'seleted-products/:value', component: LikedShoppedComponent
   }
 ];
 
