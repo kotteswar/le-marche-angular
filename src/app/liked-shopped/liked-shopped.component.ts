@@ -11,6 +11,7 @@ export class LikedShoppedComponent implements OnInit {
   public paramValue;
   public likedArr = [];
   public shoppedArr = [];
+  public totalPrice;
 
   constructor(private route: ActivatedRoute,
     ) { }
@@ -43,12 +44,18 @@ export class LikedShoppedComponent implements OnInit {
                 ...item
               };
               obj.chagedPrice = item.price;
+              obj.changedQuantity = item.quantity;
 
               return obj;
-        })
-        console.log(this.shoppedArr);
+        });
+        this.totalPrice = this.shoppedArr.reduce((acc, curr) => {
+              return acc + parseFloat(curr.chagedPrice);
+        }, 0);
+        console.log(this.shoppedArr, this.totalPrice);
       }
     }
+
+
   }
 
   public incDecProd(value, id) {
@@ -60,7 +67,9 @@ export class LikedShoppedComponent implements OnInit {
                 ...item
               };
                obj.chagedPrice = Number(parseFloat(obj.chagedPrice).toFixed(2)) + Number(parseFloat(obj.price).toFixed(2));
-            } else {
+               obj.changedQuantity = parseInt(obj.changedQuantity, 10) + parseInt(obj.quantity, 10);
+               
+              } else {
               obj = {
                 ...item
               };
@@ -74,8 +83,11 @@ export class LikedShoppedComponent implements OnInit {
              obj = {
               ...item
             };
-             if (Number(parseInt(obj.chagedPrice)) > 0) {
+             if (Number(parseInt(obj.chagedPrice, 10)) > Number(parseFloat(obj.price).toFixed(2))) {
                 obj.chagedPrice = Number(parseFloat(obj.chagedPrice).toFixed(2)) - Number(parseFloat(obj.price).toFixed(2));
+             }
+             if (parseInt(obj.changedQuantity, 10) > parseInt(obj.quantity, 10)) {
+              obj.changedQuantity = parseInt(obj.changedQuantity, 10) - parseInt(obj.quantity, 10);
              }
           } else {
             obj = {

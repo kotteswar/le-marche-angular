@@ -20,7 +20,7 @@
                 {{item.product_name}}                
               </td>
               <td> &euro; {{item.chagedPrice}} </td>
-              <td> {{item.quantity}} {{item.measure_scale}}  </td>
+              <td> {{item.changedQuantity}} {{item.measure_scale}}  </td>
               <td>  
                 <div class="d-flex text-center justify-content-center">
                   <img class="table_icon" src="assets/img/icons/minus.svg" (click)="incDecProd('dec', item.product_id)" />
@@ -29,7 +29,13 @@
               </td>
           </tr>
       </table>
+      
   </div>
+  <div class="total_row total_width d-flex align-items-center justify-content-between">
+      <h1> Total </h1>
+      <h2> &euro; {{totalPrice}} </h2>
+  </div>
+  
   <!-- <div class="table_wrapper">
       <table>
           <tr> 

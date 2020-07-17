@@ -7,6 +7,7 @@
     margin: 20px auto;
     padding-top: 0px;
     overflow-x: auto;
+    height: calc(100vh - 233px);
 }
 
 .table_wrapper table {
@@ -52,6 +53,21 @@
 .table_wrapper table tr td:last-child {
     border-right: 1px solid #333;
 }
+
+.total_row h1 {
+    font-size: 34px;
+}
+
+.total_row h2 {
+    font-size: 30px;   
+}
+
+.total_width {
+    width: 85%;
+    margin: 20px auto;   
+}
+
+
 
 
 

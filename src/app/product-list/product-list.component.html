@@ -88,9 +88,14 @@
                 <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of productList">
                     <div class="product__item">
                         <!-- [style.backgroundImage]="'url(assets/'+ item.image_url +')'" -->
-                        <div class="product__item__pic set-bg" >
-                            <img [src]="'assets/'+ item.image_url">
-                            <ul class="product__item__pic__hover">
+                        <div class="product__item__pic set-bg">
+                            <img class="thumb_img" [src]="'assets/'+ item.image_url" />
+                            <div class="like_icon_wrapper" (click)="shoppedProduct(item.product_id)" [ngClass]="{'active': item.shopped === true}">
+                                <img *ngIf="item.shopped === false" class="like_icon" src="assets/img/icons/light-grey-shopping-outline.svg" /> 
+                                <img *ngIf="item.shopped === true" class="like_icon" src="assets/img/icons/white-shopping-outline.svg" /> 
+                            </div>
+                            <!-- <img class="like_icon" src="assets/red-heart-outline.svg" /> -->
+                            <ul class="product__item__pic__hover d-none">
                                 <li [ngClass]="{'green_bg': item.liked === true}" (click)="likeProduct(item.product_id)">
                                     
                                     <img *ngIf="item.liked === false" src="assets/img/icons/white-heart-outline.svg" />
@@ -104,7 +109,7 @@
                                     
                                 </li>
 
-                                <li [ngClass]="{'green_bg': item.shopped === true}" (click)="shoppedProduct(item.product_id)">
+                                <li [ngClass]="{'green_bg': item.shopped === true}" >
                                     
                                     <img *ngIf="item.shopped === false" src="assets/img/icons/white-shopping-outline.svg" />
                                     <img *ngIf="item.shopped === true" src="assets/img/icons/white-shopping-cart.svg" />
