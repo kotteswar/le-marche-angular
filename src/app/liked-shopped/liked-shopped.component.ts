@@ -43,7 +43,7 @@ export class LikedShoppedComponent implements OnInit {
               const obj = {
                 ...item
               };
-              if (!obj.chagedPrice && obj.changedQuantity) {
+              if (!obj.hasOwnProperty('chagedPrice') && !obj.hasOwnProperty('changedQuantity')) {
                   obj.chagedPrice = item.price;
                   obj.changedQuantity = item.quantity;
               }

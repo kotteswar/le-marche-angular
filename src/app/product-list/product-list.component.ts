@@ -55,7 +55,17 @@ export class ProductListComponent implements OnInit {
         if (localStorage.getItem('shopped') !== null) {
 
           const shoppedFromLocal = JSON.parse(localStorage.getItem('shopped'));
+
+          // shoppedFromLocal.
+
+        //   if (!obj.hasOwnProperty('chagedPrice') && !obj.hasOwnProperty('changedQuantity')) {
+        //     obj.chagedPrice = item.price;
+        //     obj.changedQuantity = item.quantity;
+        // }
+
           this.shoppedArray = shoppedFromLocal;
+          console.log(this.shoppedArray);
+
 
           this.allProducts.forEach((item) => {
             shoppedFromLocal.forEach((subItem) => {
@@ -301,7 +311,13 @@ export class ProductListComponent implements OnInit {
             ...item,
             shopped: false
           };
-          this.shoppedArray.splice(this.shoppedArray.indexOf(item), 1);
+
+          const index = this.shoppedArray.findIndex(indItem => {
+            console.log(item.product_id, indItem.product_id);
+            return item.product_id === indItem.product_id;
+          });
+          console.log(this.shoppedArray, index, item);
+          this.shoppedArray.splice(index, 1);
         }
       } else {
         obj = item;

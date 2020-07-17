@@ -67,6 +67,14 @@
     margin: 20px auto;   
 }
 
+.no_data {
+    padding: 20px 10px;
+    font-size: 22px;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
 
 
 
