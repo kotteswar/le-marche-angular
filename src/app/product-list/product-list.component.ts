@@ -312,10 +312,7 @@ export class ProductListComponent implements OnInit {
             shopped: false
           };
 
-          const index = this.shoppedArray.findIndex(indItem => {
-            console.log(item.product_id, indItem.product_id);
-            return item.product_id === indItem.product_id;
-          });
+          const index = this.shoppedArray.findIndex(indItem => item.product_id === indItem.product_id);
           console.log(this.shoppedArray, index, item);
           this.shoppedArray.splice(index, 1);
         }
