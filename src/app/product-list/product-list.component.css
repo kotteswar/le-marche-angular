@@ -101,6 +101,39 @@
     border: 1px solid #fff !important;
 }
 
+.down_arrow_mob {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .down_arrow_mob.open {
+        display: inline-block;
+        width: 17px;
+        float: right;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    .mob_accord_product {
+        display: none;
+    }
+
+    .mob_accord_product.open {
+        display: block;
+    }
+
+    .down_arrow_mob.rotate {
+        transform: rotate(180deg);   
+    }
+
+    .prod_mob_layout {
+        width: 85%;
+        margin: auto;
+    }
+    
+}
+
 /* pulse Animation effect */
 
 @keyframes pulse {

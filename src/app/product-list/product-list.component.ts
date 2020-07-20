@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
   public subCateArr = [];
   public likedArray = [];
   public shoppedArray = [];
+  public openProdFilterAccord = false;
 
   constructor(private apiService: ApiServiceService) {
     
@@ -129,6 +130,7 @@ export class ProductListComponent implements OnInit {
             });
            item.sub_category = mapped;
         });
+        console.log(this.categoryArr);
         // if () {
 
         // }
@@ -329,6 +331,14 @@ export class ProductListComponent implements OnInit {
     window.addEventListener('storage', (event) => {
       console.log(event);
     });
+  }
+
+  public openProdFilter(value) {
+      this.openProdFilterAccord = value;
+  }
+
+  public closeProdFilter() {
+      this.openProdFilterAccord = false;
   }
 
 

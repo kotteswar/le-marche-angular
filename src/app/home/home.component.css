@@ -118,6 +118,7 @@
 	cursor: pointer;
 	font-size:16px;
     position: relative;
+    margin-bottom: 5px;
 }
 
 .portfolio .filter-btn ul li:after {
@@ -150,6 +151,44 @@
 	width:100%;
 	display: block;
 }
+
+.carousel-inner .item {
+    position: relative;
+}
+
+.carousel-inner .item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner .item .carousel-caption h3, 
+.carousel-inner .item .carousel-caption p {
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .carousel-inner {
+        height: 241px;
+    }
+
+    .portfolio .items .box {
+        width: 50%;
+        padding: 8px;
+    }
+
+    .carousel-inner .item .carousel-caption h3 {
+        font-size: 22px;
+    }
+
+}
+
+
 
 
 

@@ -40,7 +40,9 @@ export class HomeComponent implements OnInit {
   public istopeValue;
   // CarouselOptions = { items: 3, dots: true, nav: true };
 
-  constructor() { }
+  constructor() { 
+    this.istopeValue = 'all';
+  }
 
   ngOnInit() {
 
@@ -55,22 +57,24 @@ export class HomeComponent implements OnInit {
     for(let k=0; k<items.length; k++){
         items[k]['style'].opacity = '0';
         items[k]['style'].transform = 'scale(0)';
+        items[k]['style'].display = 'none';
         setTimeout(function() {
         // items[k]['style'].display='none';
-          items[k]['style'].height='0';
-          items[k]['style'].width='0';
+          // items[k]['style'].height='0';
+          // items[k]['style'].width='0';
           items[k]['style'].padding='0';
           items[k]['style'].visibility='hidden';
         }, 1000);
 
 
-      if(items[k].getAttribute('data-id')==target){
+      if(items[k].getAttribute('data-id') === target) {
         items[k]['style'].opacity='1';
         items[k]['style'].transform='scale(1)';
+        items[k]['style'].display = 'block';
         setTimeout(function() {
         // items[k]['style'].display='inline-block';
-          items[k]['style'].height='25%';
-          items[k]['style'].width='25%';
+          // items[k]['style'].height='25%';
+          // items[k]['style'].width='25%';
           items[k]['style'].padding='15px';
           items[k]['style'].visibility='visible';
         }, 1000)
@@ -79,10 +83,11 @@ export class HomeComponent implements OnInit {
       if(target=='all'){
         items[k]['style'].opacity='1';
         items[k]['style'].transform='scale(1)';
+        items[k]['style'].display = 'block';
         setTimeout(function() {
         // items[k]['style'].display='inline-block';
-        items[k]['style'].height='25%';
-        items[k]['style'].width='25%';
+        // items[k]['style'].height='25%';
+        // items[k]['style'].width='25%';
         items[k]['style'].padding='15px';
         items[k]['style'].visibility='visible';
         }, 1000)

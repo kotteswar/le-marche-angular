@@ -60,6 +60,7 @@ export class NavBarComponent implements OnInit {
 
   public goToShopList(value) {
     this.router.navigate(['/seleted-products/' + value]);
+    this.closeMobileMenu();
   }
 
 
