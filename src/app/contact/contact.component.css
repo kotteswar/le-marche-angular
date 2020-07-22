@@ -19,6 +19,55 @@
   font-weight: normal;
 }
 
+.form_container {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.form_btn {
+  background-color: #f06f30;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #f06f30;
+  font-size: 16px;
+}
+
+.second_form_container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.success_msg_container {
+  border: 3px solid #5c9407;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.success_msg_container img {
+    width: 30px;
+}
+
+.success_msg_container p {
+  color: #5c9407;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+::ng-deep .mat-horizontal-stepper-header .mat-step-icon {
+  margin-right: 0 !important;
+}
+
+::ng-deep .mat-step-header .mat-step-label {
+  min-width: 0 !important;
+}
+
+
+@media (max-width: 767px) {
+    .form_container {
+      width: 90%;
+    }
+}
 
 
 

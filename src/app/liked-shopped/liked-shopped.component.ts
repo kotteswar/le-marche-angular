@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-liked-shopped',
@@ -13,7 +13,7 @@ export class LikedShoppedComponent implements OnInit {
   public shoppedArr = [];
   public totalPrice;
 
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private router: Router
     ) { }
 
   ngOnInit() {
@@ -105,6 +105,10 @@ export class LikedShoppedComponent implements OnInit {
       }, 0);
       this.totalPrice = this.totalPrice.toFixed(2);
       localStorage.setItem('shopped', JSON.stringify(this.shoppedArr));
+  }
+
+  goContactPage() {
+    this.router.navigate(['contact']);
   }
 
 

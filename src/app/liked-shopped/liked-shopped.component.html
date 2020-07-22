@@ -36,7 +36,11 @@
 
   <div *ngIf="shoppedArr.length > 0" class="total_row total_width d-flex align-items-center justify-content-between">
       <h1> Total </h1>
+
+      <div>
       <h2> &euro; {{totalPrice}} </h2>
+      <button class="order_btn" (click)="goContactPage()"> endroit commander </button>
+      </div>
   </div>
   
   <!-- <div class="table_wrapper">

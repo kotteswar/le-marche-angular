@@ -59,7 +59,8 @@
 }
 
 .total_row h2 {
-    font-size: 30px;   
+    font-size: 22px;
+    text-align: right;
 }
 
 .total_width {
@@ -73,6 +74,10 @@
     border-left: 1px solid #333;
     border-right: 1px solid #333;
     border-bottom: 1px solid #333;
+}
+
+.order_btn {
+    
 }
 
 

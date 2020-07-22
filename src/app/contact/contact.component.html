@@ -39,13 +39,13 @@
         </form> -->
         <mat-horizontal-stepper [linear]="isLinear" #stepper>
             <mat-step>
-                <form [formGroup]="contactForm">
+                <form class="form_container" [formGroup]="contactForm">
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Nom </label>
                         <input type="text" class="form-control" formControlName="name"
                             id="name" placeholder="Enter name" />
                         <small id="emailHelp" class="form-text text-muted">  
-                            Nous ne partagerons jamais votre e-mail avec qui que ce soit.
+                            Nous ne partagerons jamais votre Nom avec qui que ce soit.
                         </small>
                     </div>
 
@@ -54,7 +54,7 @@
                         <input type="email" class="form-control" formControlName="email"
                         id="name" placeholder="Enter Email">
                         <small id="emailHelp" class="form-text text-muted">
-                            Nous ne partagerons jamais votre e-mail avec qui que ce soit.
+                            Nous ne partagerons jamais votre Email avec qui que ce soit.
                         </small>
                     </div>
 
@@ -63,7 +63,7 @@
                         <input type="email" class="form-control" formControlName="email"
                         id="name" placeholder="Enter Mobile number">
                         <small id="emailHelp" class="form-text text-muted">
-                            Nous ne partagerons jamais votre e-mail avec qui que ce soit.
+                            Nous ne partagerons jamais votre Numéro de portable avec qui que ce soit.
                         </small>
                     </div>
                     
@@ -72,26 +72,47 @@
                         <input type="email" class="form-control" formControlName="email"
                         id="name" placeholder="Enter Mobile number">
                         <small id="emailHelp" class="form-text text-muted">
-                            Nous ne partagerons jamais votre e-mail avec qui que ce soit.
+                            Nous ne partagerons jamais votre Adresse avec qui que ce soit.
                         </small>
                     </div>
                     
-                    <div>
-                        <button matStepperNext mat-button matStepperNext>Next</button>
+                    <div class="d-flex align-items-center justify-content-end">
+                        <button class="form_btn" mat-button matStepperNext>Next</button>
                     </div>
                 </form>
             </mat-step>
             <mat-step>
-                
-                <div>
-                    <button matStepperPrevious>Back</button>
-                    <button matStepperNext>Next</button>
+                <div class="second_form_container">
+
+                    <p> 
+                        Le montant du produit sur ce site n'a peut-être pas été mis à jour récemment. 
+                        Le montant total généré (Montant) ici est une valeur approximative. 
+                        Si vous souhaitez connaître le montant total précis, veuillez contacter le 0953739158
+                    </p>
+                    <div class="d-flex align-items-center mb-4">
+                        <input class="mr-3" type="checkbox" /> 
+                        <p class="mb-0"> J'accepte la déclaration ci-dessus </p>
+                    </div>
+                    <p> 
+                        Après avoir cliqué sur le bouton d'achat, l'un de nos agents d'assistance clientèle vous rappellera. 
+                    </p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <button class="form_btn" matStepperPrevious>Back</button>
+                        <button class="form_btn" matStepperNext>Next</button>
+                    </div>
                 </div>
             </mat-step>
-            <mat-step>
-                <div>
-                    <button matStepperPrevious type="button">Back</button>
-                    <button matStepperNext type="button">Next</button>
+            <mat-step>  
+                <div class="form_container">
+
+                    <div class="success_msg_container d-flex ">
+                        <img class="mr-4" src="assets/img/icons/tick.svg" />
+                        <p> 
+                            votre commande a été passée avec succès
+                        </p>
+                    </div>
+                   
                 </div>
             </mat-step>
         </mat-horizontal-stepper>

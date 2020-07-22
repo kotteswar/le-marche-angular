@@ -17,9 +17,10 @@ export class ProductListComponent implements OnInit {
   public likedArray = [];
   public shoppedArray = [];
   public openProdFilterAccord = false;
+  public scrolled;
+  public scrollable;
 
   constructor(private apiService: ApiServiceService) {
-    
   }
 
   ngOnInit() {
@@ -154,9 +155,12 @@ export class ProductListComponent implements OnInit {
   }
 
   public scrollHandler(event) {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = window.scrollY;
-    if (scrolled === scrollable) {
+    this.scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    console.log(document.documentElement.scrollHeight, window.innerHeight,
+        window.screen.height, window.screen.width, window.scrollY, this.scrollable);
+    this.scrolled = window.scrollY;
+    if (this.scrolled === this.scrollable) {
+      console.log(document.documentElement.scrollHeight, window.innerHeight);
       this.loadProducts();
     }
   }
