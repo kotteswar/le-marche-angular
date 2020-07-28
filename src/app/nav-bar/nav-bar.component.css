@@ -40,6 +40,7 @@ li {
 
 header.header {
     position: fixed;
+    width: calc(100vw - 15px);
     top: 0;
     left: 0;
     right: 0;
@@ -47,6 +48,8 @@ header.header {
     z-index: 2;
     box-shadow: 0 0px 8px 1px #333;
 }
+
+
 
 @media only screen and (max-width: 767px) {
     .humberger__open {
@@ -68,6 +71,9 @@ header.header {
     }
     .humberger__menu__nav ul li a {
         color: #333;
+    }
+    header.header {
+        width: 100vw;
     }
 }
 

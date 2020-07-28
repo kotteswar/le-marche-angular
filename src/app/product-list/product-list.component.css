@@ -105,6 +105,17 @@
     display: none;
 }
 
+.load_more_btn {
+    display: block;
+    background-color: #7eac39;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: auto;
+    border: 1px solid #7eac39;
+}
+
 @media (max-width: 767px) {
 
     .down_arrow_mob.open {

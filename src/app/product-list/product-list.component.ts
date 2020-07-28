@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
 
     this.getProducts();
-    window.addEventListener('scroll', this.scrollHandler.bind(this), false);
+    // window.addEventListener('scroll', this.scrollHandler.bind(this), false);
 
   }
 
@@ -149,9 +149,12 @@ export class ProductListComponent implements OnInit {
   }
 
   public loadProducts() {
-    this.allProducts.slice(this.productList.length + 1, this.productList.length + 6).forEach((item) => {
-        this.productList.push(item);
-    });
+
+        console.log('Length Else');
+        this.allProducts.slice(this.productList.length + 1, this.productList.length + 7).forEach((item) => {
+          this.productList.push(item);
+        });
+
   }
 
   public scrollHandler(event) {
@@ -159,10 +162,11 @@ export class ProductListComponent implements OnInit {
     console.log(document.documentElement.scrollHeight, window.innerHeight,
         window.screen.height, window.screen.width, window.scrollY, this.scrollable);
     this.scrolled = window.scrollY;
-    if (this.scrolled === this.scrollable) {
-      console.log(document.documentElement.scrollHeight, window.innerHeight);
-      this.loadProducts();
-    }
+    // if (this.scrolled === this.scrollable) {
+    //   console.log(document.documentElement.scrollHeight, window.innerHeight);
+    //   this.loadProducts();
+    // }
+    this.loadProducts();
   }
 
   public selectAll(event) {

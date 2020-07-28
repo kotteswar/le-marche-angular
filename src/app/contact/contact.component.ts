@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
   isLinear = true;
+  acceptParam = false;
 
   constructor(private _formBuilder: FormBuilder) { }
 
@@ -25,9 +26,23 @@ export class ContactComponent implements OnInit {
 
     this.contactForm = this._formBuilder.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
+      mobNum: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      address: [''],
     });
 
+  }
+
+  submitForm() {
+    // console.log(this.contactForm);
+  }
+
+  checkAccept(event) {
+      if (event.target.checked === true) {
+        this.acceptParam = true;
+      } else {
+        this.acceptParam = false;
+      }
   }
 
   // goForward(stepper: MatStepper) {

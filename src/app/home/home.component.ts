@@ -15,24 +15,36 @@ export class HomeComponent implements OnInit {
 
   products = [
     {
-      proName: 'Fresh Fruits',
-      img: 'assets/img/product/categories/cat-1.jpg'
+      proName: 'Royal Gala',
+      img: 'assets/img/products_images/fruits/apple/apple_gala.png'
     },
     {
       proName: 'Dried Fruits',
-      img: 'assets/img/product/categories/cat-2.jpg'
+      img: 'assets/img/products_images/vegetables/fruit_vegetables/round_tomato.png'
     },
     {
-      proName: 'Vegetables',
-      img: 'assets/img/product/categories/cat-3.jpg'
+      proName: 'Mandarine',
+      img: 'assets/img/products_images/fruits/cirtus/mandarine.png'
     },
     {
-      proName: 'Drink Fruits',
-      img: 'assets/img/product/categories/cat-4.jpg'
+      proName: 'Rattu du tuquet',
+      img: 'assets/img/products_images/vegetables/potatoes/rattu_du_tuquet.png'
     },
     {
-      proName: 'Meats',
-      img: 'assets/img/product/categories/cat-5.jpg'
+      proName: 'Banane bio',
+      img: 'assets/img/products_images/fruits/other_fruits/banana.png'
+    },
+    {
+      proName: 'Oignons Rouge',
+      img: 'assets/img/products_images/vegetables/onions_garlic/red_onion.png'
+    },
+    {
+      proName: 'Pasteque',
+      img: 'assets/img/products_images/fruits/other_fruits/watermelon.png'
+    },
+    {
+      proName: 'Carotte',
+      img: 'assets/img/products_images/vegetables/root_vegetables/carrot.png'
     }
   ];
 
@@ -58,39 +70,39 @@ export class HomeComponent implements OnInit {
         items[k]['style'].opacity = '0';
         items[k]['style'].transform = 'scale(0)';
         items[k]['style'].display = 'none';
-        setTimeout(function() {
-        // items[k]['style'].display='none';
-          // items[k]['style'].height='0';
-          // items[k]['style'].width='0';
-          items[k]['style'].padding='0';
-          items[k]['style'].visibility='hidden';
-        }, 1000);
+        // setTimeout(function() {
+        // // items[k]['style'].display='none';
+        //   // items[k]['style'].height='0';
+        //   // items[k]['style'].width='0';
+        //   items[k]['style'].padding='0';
+        //   items[k]['style'].visibility='hidden';
+        // }, 1000);
 
 
       if(items[k].getAttribute('data-id') === target) {
         items[k]['style'].opacity='1';
         items[k]['style'].transform='scale(1)';
         items[k]['style'].display = 'block';
-        setTimeout(function() {
-        // items[k]['style'].display='inline-block';
-          // items[k]['style'].height='25%';
-          // items[k]['style'].width='25%';
-          items[k]['style'].padding='15px';
-          items[k]['style'].visibility='visible';
-        }, 1000)
+        // setTimeout(function() {
+        // // items[k]['style'].display='inline-block';
+        //   // items[k]['style'].height='25%';
+        //   // items[k]['style'].width='25%';
+        //   items[k]['style'].padding='15px';
+        //   items[k]['style'].visibility='visible';
+        // }, 1000)
 
       }
       if(target=='all'){
         items[k]['style'].opacity='1';
         items[k]['style'].transform='scale(1)';
         items[k]['style'].display = 'block';
-        setTimeout(function() {
-        // items[k]['style'].display='inline-block';
-        // items[k]['style'].height='25%';
-        // items[k]['style'].width='25%';
-        items[k]['style'].padding='15px';
-        items[k]['style'].visibility='visible';
-        }, 1000)
+        // setTimeout(function() {
+        // // items[k]['style'].display='inline-block';
+        // // items[k]['style'].height='25%';
+        // // items[k]['style'].width='25%';
+        // items[k]['style'].padding='15px';
+        // items[k]['style'].visibility='visible';
+        // }, 1000)
       }
     }
 

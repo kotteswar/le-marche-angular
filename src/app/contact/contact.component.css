@@ -27,10 +27,16 @@
 .form_btn {
   background-color: #f06f30;
   color: #fff;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 5px;
   border: 1px solid #f06f30;
   font-size: 16px;
+}
+
+.form_btn:disabled {
+  background-color: #6d6d6d;
+  border: 1px solid #6d6d6d;
+  color: #a2a2a2;
 }
 
 .second_form_container {
@@ -52,6 +58,27 @@
   color: #5c9407;
   font-size: 18px;
   margin-bottom: 0;
+}
+
+.map {
+  height: 320px;
+  margin-top: 20px;
+}
+
+.map .map-inside {
+  top: 3px;
+}
+
+.map .map-inside .inside-widget:after {
+  display: none;
+}
+
+.contact-form {
+  padding-top: 25px;
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+  pointer-events: none !important;
 }
 
 ::ng-deep .mat-horizontal-stepper-header .mat-step-icon {

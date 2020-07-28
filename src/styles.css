@@ -35,6 +35,7 @@ body {
 	height: 100%;
 	font-family: "Cairo", sans-serif;
 	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
 	font-smoothing: antialiased;
 }
 

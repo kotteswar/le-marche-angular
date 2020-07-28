@@ -14,6 +14,25 @@
   </div>
 </section>
 
+<!-- Map Begin -->
+<div class="map">
+    <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+        height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10575.201998811724!2d1.9613835!3d48.4987174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x835c3f154ce8d991!2sLe%20March%C3%A9%20De%20Garlande!5e0!3m2!1sen!2sin!4v1595921180561!5m2!1sen!2sin" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <!-- <div class="map-inside">
+        <i class="icon_pin"></i>
+        <div class="inside-widget">
+            <h4>Le Marché De Garlande</h4>
+            <ul>
+                <li>2 Place Etienne de Garlande,</li>
+                <li>91410 Corbreuse, France</li>
+            </ul>
+        </div>
+    </div> -->
+</div>
+<!-- Map End -->
+
 <div class="contact-form spad">
     <div class="container">
         <!-- <div class="row">
@@ -43,7 +62,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Nom </label>
                         <input type="text" class="form-control" formControlName="name"
-                            id="name" placeholder="Enter name" />
+                            id="name" placeholder="Enter Nom" />
                         <small id="emailHelp" class="form-text text-muted">  
                             Nous ne partagerons jamais votre Nom avec qui que ce soit.
                         </small>
@@ -52,7 +71,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Email </label>
                         <input type="email" class="form-control" formControlName="email"
-                        id="name" placeholder="Enter Email">
+                        id="email" name="email" placeholder="Enter Email">
                         <small id="emailHelp" class="form-text text-muted">
                             Nous ne partagerons jamais votre Email avec qui que ce soit.
                         </small>
@@ -60,8 +79,8 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Numéro de portable </label>
-                        <input type="email" class="form-control" formControlName="email"
-                        id="name" placeholder="Enter Mobile number">
+                        <input type="email" class="form-control" formControlName="mobNum"
+                        id="mobNum" name="mobNum" placeholder="Enter Numéro de portable">
                         <small id="emailHelp" class="form-text text-muted">
                             Nous ne partagerons jamais votre Numéro de portable avec qui que ce soit.
                         </small>
@@ -69,15 +88,18 @@
                     
                     <div class="form-group">
                         <label for="exampleInputEmail1"> Adresse </label>
-                        <input type="email" class="form-control" formControlName="email"
-                        id="name" placeholder="Enter Mobile number">
+                        <input type="email" class="form-control" formControlName="address"
+                        id="address" name="address" placeholder="Enter Adresse">
                         <small id="emailHelp" class="form-text text-muted">
                             Nous ne partagerons jamais votre Adresse avec qui que ce soit.
                         </small>
                     </div>
                     
                     <div class="d-flex align-items-center justify-content-end">
-                        <button class="form_btn" mat-button matStepperNext>Next</button>
+                        <button class="form_btn" (click)="submitForm()"
+                             mat-button matStepperNext [disabled]="contactForm.status === 'INVALID'">
+                            Next
+                        </button>
                     </div>
                 </form>
             </mat-step>
@@ -90,7 +112,7 @@
                         Si vous souhaitez connaître le montant total précis, veuillez contacter le 0953739158
                     </p>
                     <div class="d-flex align-items-center mb-4">
-                        <input class="mr-3" type="checkbox" /> 
+                        <input class="mr-3" type="checkbox" (change)="checkAccept($event)" /> 
                         <p class="mb-0"> J'accepte la déclaration ci-dessus </p>
                     </div>
                     <p> 
@@ -99,8 +121,8 @@
 
                     <div class="d-flex align-items-center justify-content-between">
                         <button class="form_btn" matStepperPrevious>Back</button>
-                        <button class="form_btn" matStepperNext>Next</button>
-                    </div>
+                        <button class="form_btn" [disabled]="!acceptParam" matStepperNext>Next</button>
+                    </div> 
                 </div>
             </mat-step>
             <mat-step>  
