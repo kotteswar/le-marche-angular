@@ -18,8 +18,27 @@
 .product__item__pic {
     background-color: transparent;
     position: relative;
-    border: 6px solid #f58b36;
-    border-radius: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.product__item__pic > h6,
+.product__item__pic > h5 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.product__item__pic > h6 {
+    top: 0;
+}
+
+.product__item__pic > h5 {
+    bottom: 0;
 }
 
 .product__item__pic > img.thumb_img {
@@ -88,7 +107,7 @@
 
 .product__item:hover .product__item__pic > img {
     transition: all ease 0.5s;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
 }
 
 .product__item__pic__hover li {
@@ -115,6 +134,80 @@
     margin: auto;
     border: 1px solid #7eac39;
 }
+
+.shop_btn {
+    position: relative;
+    font-size: 20px;
+    background-color: #ccc;
+    border: none;
+    height: 40px;
+    width: 55px;
+}
+
+.shop_btn .before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    background-color: #c4352e;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.shop_btn:hover .before {
+    transform: translateY(0) rotateX(0);
+}
+
+.shop_btn .after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    background-color: #ff4f3a;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(0) rotateX(0);
+}
+  
+  .shop_btn:hover .after {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+
+.shop_btn img {
+    width: 20px;
+}
+
+.product__item .shop_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+    transition: 0.5s ease;
+    padding-top: 35px;
+    padding-right: 10px;
+}
+
+.product__item:hover .shop_overlay {
+    bottom: 0;
+    transition: 0.5s ease;
+}
+
+
 
 @media (max-width: 767px) {
 

@@ -111,6 +111,14 @@ export class LikedShoppedComponent implements OnInit {
     this.router.navigate(['contact']);
   }
 
+  removeProduct(id) {
+    const index = this.shoppedArr.findIndex((item) =>  item.product_id === id);
+    this.shoppedArr.splice(index, 1);
+    localStorage.setItem('shopped', JSON.stringify(this.shoppedArr));
+    console.log(this.shoppedArr);
+    console.log(index);
+  }
+
 
 
 }

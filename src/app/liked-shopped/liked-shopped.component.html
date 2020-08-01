@@ -1,5 +1,5 @@
 <div class="outer_table_wrapper">
-  <div class="table_wrapper">
+  <div class="table_wrapper" [ngClass]="{'prod_container': shoppedArr.length > 0}">
       <!-- <table>
           <tr> 
               <th> S No </th>
@@ -40,7 +40,7 @@
               </div>
               <h2> {{item.product_name}} </h2>
               <h5 class="text-right"> &euro; {{item.chagedPrice}} </h5>
-              <button> 
+              <button (click)="removeProduct(item.product_id)"> 
                   Supprimer le produit
               </button>
           </div>

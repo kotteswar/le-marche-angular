@@ -349,5 +349,9 @@ export class ProductListComponent implements OnInit {
       this.openProdFilterAccord = false;
   }
 
+  public shopBtn() {
+    console.log('Shopping Button');
+  }
+
 
 }
