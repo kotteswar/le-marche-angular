@@ -1,6 +1,6 @@
 <div class="outer_table_wrapper">
   <div class="table_wrapper">
-      <table>
+      <!-- <table>
           <tr> 
               <th> S No </th>
               <th class="text-center"> Product Image </th>
@@ -28,10 +28,28 @@
                 </div>
               </td>
           </tr>
-      </table>
+      </table> -->
+
+      <div class="shop_box" *ngFor="let item of shoppedArr;">
+          <img [src]="'assets/'+ item.image_url" />
+          <div class="box_content">
+              <div>
+                  <img class="table_icon" src="assets/img/icons/minus.svg" (click)="incDecProd('dec', item.product_id)" />
+                  <span> {{item.changedQuantity}} {{item.measure_scale}} </span>
+                  <img class="table_icon ml-3" src="assets/img/icons/plus.svg" (click)="incDecProd('inc', item.product_id)" />                
+              </div>
+              <h2> {{item.product_name}} </h2>
+              <h5 class="text-right"> &euro; {{item.chagedPrice}} </h5>
+              <button> 
+                  Supprimer le produit
+              </button>
+          </div>
+      </div>
+
       <div class="text-center no_data" *ngIf="!shoppedArr || shoppedArr.length === 0"> 
         No Data Available
       </div>
+
   </div>
 
   <div *ngIf="shoppedArr.length > 0" class="total_row total_width d-flex align-items-center justify-content-between">

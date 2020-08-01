@@ -204,6 +204,18 @@
         font-size: 22px;
     }
 
+    .portfolio .items .box .inner {
+        width: 100%; 
+    }
+
+    .portfolio .items .box {
+        width: 33%;
+    }
+
+    .portfolio .items .box .inner img {
+        border-radius: 7px;
+    }
+
 }
 
 

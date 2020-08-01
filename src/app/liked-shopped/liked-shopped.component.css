@@ -3,11 +3,15 @@
 }
 
 .table_wrapper {
-    width: 85%;
+    width: 90%;
     margin: 20px auto;
     padding-top: 0px;
     overflow-x: auto;
-    height: calc(100vh - 233px);
+    height: calc(100vh - 240px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .table_wrapper table {
@@ -64,7 +68,7 @@
 }
 
 .total_width {
-    width: 85%;
+    width: 90%;
     margin: 20px auto;   
 }
 
@@ -80,6 +84,106 @@
     
 }
 
+.shop_box {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 48%;
+}
+
+.shop_box > img {
+    width: 40%;
+    border-right: 1px solid #ccc;
+}
+
+.shop_box .box_content {
+    width: 100%;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop_box .func_wrapper {
+    width: 40%;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop_box .box_content > div {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.shop_box .box_content > h2,
+.shop_box .box_content > h5 {
+    padding: 5px 10px;
+}
+
+.shop_box .box_content > h2 {
+    /* font-size: 20px; */
+}
+
+.shop_box .func_wrapper > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.shop_box .func_wrapper button {
+
+}
+
+.shop_box .box_content button {
+    width: 100%;
+    font-size: 12px;
+    background-color: #7eac39;
+    color: #fff;
+    border: transparent;
+    padding: 7px 10px;
+    position: relative;
+    transition-duration: 0.3s;
+    transform: perspective(1px) translateZ(0);
+}
+
+.shop_box .box_content button:before {
+    content: '';
+    background-color: #f06f30;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.shop_box .box_content button:hover:before {
+    transform: scaleX(1);
+}
+
+@media (max-width: 767px) {
+    .shop_box .box_content > h2 {
+        font-size: 20px;
+    }
+    .shop_box {
+        width: 100%;
+    }
+}
 
 
 
