@@ -153,7 +153,7 @@
     height: 100%;
     text-align: center;
     line-height: 35px;
-    background-color: #c4352e;
+    background-color: #ff6114;
     color: #fff;
     transition: 0.5s;
     transform-origin: top;
@@ -173,11 +173,19 @@
     height: 100%;
     text-align: center;
     line-height: 35px;
-    background-color: #ff4f3a;
+    background-color: #f58b36;
     color: #fff;
     transition: 0.5s;
     transform-origin: bottom;
     transform: translateY(0) rotateX(0);
+}
+
+.shop_btn.selected .before {
+    background-color: #c4352e;
+}
+
+.shop_btn.selected .after {
+    background-color: #ff4f3a;
 }
   
   .shop_btn:hover .after {

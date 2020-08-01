@@ -93,7 +93,7 @@
 }
 
 .shop_box > img {
-    width: 40%;
+    width: 25%;
     border-right: 1px solid #ccc;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .shop_box .box_content > h2 {
-    /* font-size: 20px; */
+    font-size: 24px;
 }
 
 .shop_box .func_wrapper > div {

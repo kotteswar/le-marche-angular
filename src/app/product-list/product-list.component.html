@@ -124,7 +124,9 @@
                                 
                             </ul>
                             <div class="shop_overlay">
-                                <button (click)="shoppedProduct(item.product_id)" [ngClass]="{'active': item.shopped === true}" class="shop_btn">
+                                <button (click)="shoppedProduct(item.product_id)" 
+                                    [ngClass]="{'active selected': item.shopped === true }" 
+                                    class="shop_btn">
                                     <span class="before"> 
                                         <img *ngIf="item.shopped === false" class="like_icon" src="assets/img/icons/white-shopping-outline.svg" /> 
                                         <img *ngIf="item.shopped === true" class="like_icon" src="assets/img/icons/white-shopping-cart.svg" />
