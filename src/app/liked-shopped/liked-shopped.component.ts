@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-liked-shopped',
@@ -13,7 +14,9 @@ export class LikedShoppedComponent implements OnInit {
   public shoppedArr = [];
   public totalPrice;
 
-  constructor(private route: ActivatedRoute, private router: Router
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private apiService: ApiServiceService
     ) { }
 
   ngOnInit() {
@@ -115,6 +118,7 @@ export class LikedShoppedComponent implements OnInit {
     const index = this.shoppedArr.findIndex((item) =>  item.product_id === id);
     this.shoppedArr.splice(index, 1);
     localStorage.setItem('shopped', JSON.stringify(this.shoppedArr));
+    this.apiService.sendShopped(JSON.parse(localStorage.getItem('shopped')));
     console.log(this.shoppedArr);
     console.log(index);
   }
