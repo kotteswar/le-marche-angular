@@ -158,6 +158,7 @@
 .portfolio .items .box .inner {
     width: 70%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .portfolio .items .box .inner img{

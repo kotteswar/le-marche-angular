@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -52,7 +53,7 @@ export class HomeComponent implements OnInit {
   public istopeValue;
   // CarouselOptions = { items: 3, dots: true, nav: true };
 
-  constructor() { 
+  constructor(private router: Router) { 
     this.istopeValue = 'all';
   }
 
@@ -106,7 +107,11 @@ export class HomeComponent implements OnInit {
       }
     }
 
-	}
+  }
+  
+  public goToShopPage() {
+    this.router.navigate(['/products']);
+  }
 
 
 

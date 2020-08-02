@@ -46,8 +46,8 @@
 
 <div class='container-fluid custom-owl-carousel'>
   <owl-carousel [options]="SlideOptions" [items]="Images" [carouselClasses]="['owl-theme', 'sliding']" >
-    <div class="item" *ngFor="let item of products">
-      <div style="align-content: center">
+    <div class="item" (click)="goToShopPage()" *ngFor="let item of products">
+      <div style="align-content: center; cursor: pointer;">
           <img style="height: 260px;width:100%"src={{item.img}}/>
           <h4> {{item.proName}} </h4>
       </div>
@@ -70,12 +70,12 @@
    	  </div>
    	  <div class="items">
    	  	 <div class="box" data-id="fruits">
-   	  	 	 <div class="inner">
+   	  	 	 <div class="inner" (click)="goToShopPage()">
    	  	 	 	 <img src="assets/img/products_images/fruits/cirtus/orri.png" alt="portfolio" />
    	  	 	 </div>
           </div>
           <div class="box" data-id="vegetables">
-            <div class="inner">
+            <div class="inner" (click)="goToShopPage()">
                <img src="assets/img/products_images/vegetables/fruit_vegetables/cherry_tomato.png" alt="portfolio" />
             </div>
          </div>
@@ -85,27 +85,27 @@
    	  	 	 </div>
           </div>
         <div class="box" data-id="vegetables">
-            <div class="inner">
+            <div class="inner" (click)="goToShopPage()">
                <img src="assets/img/products_images/vegetables/potatoes/yam.png" alt="portfolio" />
             </div>
         </div>
    	  	 <div class="box" data-id="fruits">
-   	  	 	 <div class="inner">
+   	  	 	 <div class="inner" (click)="goToShopPage()">
    	  	 	 	 <img src="assets/img/products_images/fruits/red_fruits/gooseberry.png" alt="portfolio" />
    	  	 	 </div>
           </div>
         <div class="box" data-id="vegetables">
-            <div class="inner">
+            <div class="inner" (click)="goToShopPage()">
                  <img src="assets/img/products_images/vegetables/herbs/mint.png" alt="portfolio" />
             </div>
         </div>
    	  	 <div class="box" data-id="fruits">
-   	  	 	 <div class="inner">
+   	  	 	 <div class="inner" (click)="goToShopPage()">
    	  	 	 	 <img src="assets/img/products_images/fruits/red_fruits/cherry_red.png" alt="portfolio" />
    	  	 	 </div>
    	  	 </div>
    	  	<div class="box" data-id="vegetables">
-          <div class="inner">
+          <div class="inner" (click)="goToShopPage()">
               <img src="assets/img/products_images/vegetables/root_vegetables/pink_radish.png" alt="portfolio" />
           </div>
         </div>    
