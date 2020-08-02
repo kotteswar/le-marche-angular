@@ -7,22 +7,22 @@
     height: 450px;
 }
 
-.carousel-inner .item {
+.carousel-inner .carousel-item {
     height: 100%;
 }
 
-.custom-owl-carousel ::ng-deep .owl-item .item {
+.custom-owl-carousel ::ng-deep .owl-item .carousel-item {
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.custom-owl-carousel ::ng-deep .owl-item .item > div > img {
+.custom-owl-carousel ::ng-deep .owl-carousel-item .carousel-item > div > img {
     box-shadow: 0 1px 5px 2px #bbb;
     border-radius: 15px;
 }
 
-.custom-owl-carousel ::ng-deep .owl-item .item h4 {
+.custom-owl-carousel ::ng-deep .owl-item .carousel-item h4 {
     font-size: 18px;
     text-align: center;
     position: absolute;
@@ -167,11 +167,11 @@
     border-radius: 15px;
 }
 
-.carousel-inner .item {
+.carousel-inner .carousel-item {
     position: relative;
 }
 
-.carousel-inner .item:before {
+.carousel-inner .carousel-item:before {
     content: '';
     position: absolute;
     left: 0;
@@ -181,13 +181,33 @@
     width: 100%;
 }
 
-.carousel-inner .item .carousel-caption h3, 
-.carousel-inner .item .carousel-caption p {
+.carousel-inner .carousel-item .carousel-caption h3, 
+.carousel-inner .carousel-item .carousel-caption p {
     color: #fff;
 }
 
 ::ng-deep .owl-carousel .owl-wrapper-outer {
     overflow: initial;
+}
+
+.bg_img {
+
+}
+
+.bg_img.bg_img_1 {
+    background-image: url('../../assets/img/slide1.jpg');
+}
+
+.bg_img.bg_img_2 {
+    background-image: url('../../assets/img/slide2.jpg');
+}
+
+.bg_img.bg_img_3 {
+    background-image: url('../../assets/img/slide3.jpg');
+}
+
+.carousel-inner {
+    background-image: url('../../assets/img/overall_banner.jpg');
 }
 
 @media only screen and (max-width: 767px) {
@@ -201,7 +221,7 @@
         padding: 8px;
     }
 
-    .carousel-inner .item .carousel-caption h3 {
+    .carousel-inner .carousel-item .carousel-caption h3 {
         font-size: 22px;
     }
 
