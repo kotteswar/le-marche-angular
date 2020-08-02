@@ -34,9 +34,15 @@
           <img [src]="'assets/'+ item.image_url" />
           <div class="box_content">
               <div>
-                  <img class="table_icon" src="assets/img/icons/minus.svg" (click)="incDecProd('dec', item.product_id)" />
-                  <span> {{item.changedQuantity}} {{item.measure_scale}} </span>
-                  <img class="table_icon ml-3" src="assets/img/icons/plus.svg" (click)="incDecProd('inc', item.product_id)" />                
+                  <!-- <img class="table_icon" src="assets/img/icons/minus.svg" (click)="incDecProd('dec', item.product_id)" /> -->
+                  <span class="min_plu_icon minus" (click)="incDecProd('dec', item.product_id)"> 
+                    <i class="fa fa-minus"></i> 
+                  </span>
+                  <span class="quant_measure"> {{item.changedQuantity}} {{item.measure_scale}} </span>
+                  <!-- <img class="table_icon ml-3" src="assets/img/icons/plus.svg" (click)="incDecProd('inc', item.product_id)" /> -->
+                  <span class="min_plu_icon plus" (click)="incDecProd('inc', item.product_id)"> 
+                    <i class="fa fa-plus"></i> 
+                  </span>
               </div>
               <h2> {{item.product_name}} </h2>
               <h5 class="text-right"> &euro; {{item.chagedPrice}} </h5>
