@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit {
   isLinear = true;
   acceptParam = false;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private router: Router,private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
 
@@ -33,8 +34,12 @@ export class ContactComponent implements OnInit {
 
   }
 
-  submitForm() {
-    // console.log(this.contactForm);
+  gotoProduct() {
+    this.router.navigate(['home']);
+    location.reload();
+  }
+  goToHome(){
+    this.router.navigate(['home']);
   }
 
   checkAccept(event) {

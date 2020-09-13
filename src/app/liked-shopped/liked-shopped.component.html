@@ -58,12 +58,14 @@
 
   </div>
 
-  <div *ngIf="shoppedArr.length > 0" class="total_row total_width d-flex align-items-center justify-content-between">
-      <h1> Total </h1>
-
+  <div *ngIf="shoppedArr.length > 0" class="total_row total_width d-flex align-items-center justify-content-between total-button">
       <div>
-      <h2> &euro; {{totalPrice}} </h2>
-      <button class="order_btn" (click)="goContactPage()"> endroit commander </button>
+      <h2 class="total-price">
+        <code class="total-text">Prix total approximatif</code> 
+        <code>&euro; {{totalPrice}}</code> 
+      </h2>
+      <button class="btn order_btn" (click)="goContactPage()">Endroit commander</button>
+
       </div>
   </div>
   

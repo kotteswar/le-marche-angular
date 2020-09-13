@@ -14,6 +14,7 @@ export class NavBarComponent implements OnInit {
   public shopped;
   public likedLength;
   public shoppedLength;
+  public purchasedItem;
 
   constructor(private apiService: ApiServiceService, private router: Router) {
 
@@ -26,6 +27,7 @@ export class NavBarComponent implements OnInit {
     this.apiService.getShopped().subscribe((res) => {
         console.log(res);
         this.shopped = res.shopped;
+        this.purchasedItem = res.shopped;
         this.shoppedLength = this.shopped.length;
     });
   }

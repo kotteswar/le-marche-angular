@@ -132,6 +132,7 @@ export class ProductListComponent implements OnInit {
            item.sub_category = mapped;
         });
         console.log(this.categoryArr);
+        
         // if () {
 
         // }

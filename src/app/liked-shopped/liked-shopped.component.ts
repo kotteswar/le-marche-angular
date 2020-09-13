@@ -58,6 +58,7 @@ export class LikedShoppedComponent implements OnInit {
         }, 0);
         this.totalPrice = this.totalPrice.toFixed(2);
         console.log(this.shoppedArr, this.totalPrice);
+        localStorage.setItem('totalPrice', JSON.stringify(this.totalPrice));
       }
     }
 
@@ -107,6 +108,7 @@ export class LikedShoppedComponent implements OnInit {
         return acc + parseFloat(curr.chagedPrice);
       }, 0);
       this.totalPrice = this.totalPrice.toFixed(2);
+      localStorage.setItem('totalPrice', JSON.stringify(this.totalPrice));
       localStorage.setItem('shopped', JSON.stringify(this.shoppedArr));
   }
 

@@ -1,6 +1,84 @@
 {
     "Sheet1": [
         {
+            "product_id": "1000",
+            "product_name": "Royal gala",
+            "english_name": "Apple gala",
+            "main_category": "fruit",
+            "sub_category": "apple",
+            "sub_name_french": "Pommes",
+            "sub_name_eng": "Apple",
+            "quantity": "1",
+            "price": "2.99",
+            "image_url": "img/products_images/fruits/apple/apple_gala.png",
+            "measure_scale": "kg"
+        },
+        {
+            "product_id": "1001",
+            "product_name": "Pomme golden",
+            "english_name": "Golden apple",
+            "main_category": "fruit",
+            "sub_category": "apple",
+            "sub_name_french": "Pommes",
+            "sub_name_eng": "Apple",
+            "quantity": "1",
+            "price": "2.99",
+            "image_url": "img/products_images/fruits/apple/golden_apple.png",
+            "measure_scale": "kg"
+        },
+        {
+            "product_id": "1002",
+            "product_name": "Pomme granny",
+            "english_name": "Green apple",
+            "main_category": "fruit",
+            "sub_category": "apple",
+            "sub_name_french": "Pommes",
+            "sub_name_eng": "Apple",
+            "quantity": "1",
+            "price": "3.95",
+            "image_url": "img/products_images/fruits/apple/green_apple.png",
+            "measure_scale": "kg"
+        },
+        {
+            "product_id": "1003",
+            "product_name": "Pink lady",
+            "english_name": "Pinkl lany",
+            "main_category": "fruit",
+            "sub_category": "apple",
+            "sub_name_french": "Pommes",
+            "sub_name_eng": "Apple",
+            "quantity": "1",
+            "price": "3.99",
+            "image_url": "img/products_images/fruits/apple/pinklady_apple.png",
+            "measure_scale": "kg"
+        },
+        {
+            "product_id": "1004",
+            "product_name": "Jazz",
+            "english_name": "jazz",
+            "main_category": "fruit",
+            "sub_category": "apple",
+            "sub_name_french": "Pommes",
+            "sub_name_eng": "Apple",
+            "quantity": "1",
+            "price": "3.99",
+            "image_url": "img/products_images/fruits/apple/jazz_apple.png",
+            "measure_scale": "kg"
+        },
+        {
+            "product_id": "1005",
+            "product_name": "Citron vert",
+            "english_name": "Lime",
+            "main_category": "fruit",
+            "sub_category": "cirtus",
+            "sub_name_french": "agrumes",
+            "sub_name_eng": "cirtus",
+            "quantity": "1",
+            "price": "4.9",
+            "image_url": "img/products_images/fruits/cirtus/lime.png",
+            "measure_scale": "kg"
+        },
+        {
             "product_id": "1006",
             "product_name": "Citron jaune",
             "english_name": "Orange lemon",
@@ -1574,5 +1652,4 @@
             "measure_scale": "kg"
         }
     ]
-
 }

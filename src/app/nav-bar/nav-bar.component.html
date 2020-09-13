@@ -2,7 +2,7 @@
  <div class="humberger__menu__overlay" [ngClass]="{'visibility_visible': openMenuParam}" (click)="closeMobileMenu()"></div>
  <div class="humberger__menu__wrapper" [ngClass]="{'visible_menu': openMenuParam}">
      <div class="humberger__menu__logo">
-         <a href="#"><img src="assets/img/logo.png" alt=""></a>
+         <a [routerLink]="['/home']"><img src="assets/img/logo.png" alt=""></a>
      </div>
      <nav class="humberger__menu__nav mobile-menu" [ngClass]="{'d-block': openMenuParam}">
          <ul>
@@ -12,15 +12,6 @@
              <li routerLinkActive="active">
                  <a [routerLink]="['/products']" (click)="closeMobileMenu()">Shop</a>
              </li>
-             <!-- <li><a href="#">Pages</a>
-                 <ul class="header__menu__dropdown">
-                     <li><a href="./shop-details.html">Shop Details</a></li>
-                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                     <li><a href="./checkout.html">Check Out</a></li>
-                     <li><a href="./blog-details.html">Blog Details</a></li>
-                 </ul>
-             </li> -->
-             <!-- <li><a href="./blog.html">Blog</a></li> -->
              <li routerLinkActive="active" class="mb-5">
                  <a [routerLink]="['/contact']" (click)="closeMobileMenu()">Contact</a>
              </li>
@@ -32,22 +23,10 @@
                 </div>
             </li>
          </ul>
-         <h5>+91 9080674229</h5>
-         <span>support 24/7 time</span>
+         <h5>0953739158</h5>
      </nav>
      <div id="mobile-menu-wrap"></div>
-     <div class="header__top__right__social">
-         <a href="#"><i class="fa fa-facebook"></i></a>
-         <a href="#"><i class="fa fa-twitter"></i></a>
-         <a href="#"><i class="fa fa-linkedin"></i></a>
-         <a href="#"><i class="fa fa-pinterest-p"></i></a>
-     </div>
-     <div class="humberger__menu__contact">
-         <ul>
-             <li><i class="fa fa-envelope"></i> hello@lemarchedegarlande.com</li>
-             <li>Free Shipping for all Order of $99</li>
-         </ul>
-     </div>
+     
  </div>
  <!-- Humberger End -->
 
@@ -57,7 +36,7 @@
          <div class="d-flex align-items-center justify-content-between">
              <div class="col-lg-3">
                  <div class="header__logo">
-                     <a href="./index.html"><img src="assets/img/logo.png" alt=""></a>
+                     <a [routerLink]="['/home']"><img src="assets/img/logo.png" alt=""></a>
                  </div>
              </div>
              <div class="col-lg-6">
@@ -65,26 +44,6 @@
                      <ul class="d-flex justify-content-end">
                          <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
                          <li routerLinkActive="active"><a [routerLink]="['/products']">Shop</a></li>
-                         <!-- <li><a href="#">Pages</a>
-                             <ul class="header__menu__dropdown">
-                                 <li><a href="./shop-details.html">Shop Details</a></li>
-                                 <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                 <li><a href="./checkout.html">Check Out</a></li>
-                                 <li><a href="./blog-details.html">Blog Details</a></li>
-                             </ul>
-                         </li> -->
-                         <!-- <li><a href="./blog.html">Blog</a></li> -->
-                         <!-- <li routerLinkActive="active">
-                             <a [routerLink]="['/contact']">Contact</a>
-                         </li> -->
-                         <!-- (click)="goToShopList('liked')" -->
-                         <!-- <li class="position-relative">
-                                
-                                <span *ngIf="likedLength" class="number-count"> {{likedLength}} </span>
-                                <img *ngIf="liked?.length === 0 || !liked" class="nav_icon"  src="assets/img/icons/green-heart-outline.svg" />
-                                <img *ngIf="liked?.length > 0" class="nav_icon" src="assets/img/icons/green-heart-fill.svg" />
-                             
-                        </li> -->
                          <li class="position-relative" (click)="goToShopList('shopped')"> 
                             
                                 <span *ngIf="shoppedLength" class="number-count"> {{shoppedLength}} </span>

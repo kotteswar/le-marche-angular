@@ -3,10 +3,10 @@
       <div class="row">
           <div class="col-lg-12 text-center">
               <div class="breadcrumb__text">
-                  <h2>Contact Us</h2>
+                  <h2>Nous contacter</h2>
                   <div class="breadcrumb__option">
-                      <a href="./index.html">Home</a>
-                      <span>Contact Us</span>
+                      <a href="javascript:void(0);" (click)="goToHome()">Accueil</a>
+                      <span>Nous contacter</span>
                   </div>
               </div>
           </div>
@@ -96,8 +96,7 @@
                     </div>
                     
                     <div class="d-flex align-items-center justify-content-end">
-                        <button class="form_btn" (click)="submitForm()"
-                             mat-button matStepperNext [disabled]="contactForm.status === 'INVALID'">
+                        <button class="form_btn" mat-button matStepperNext [disabled]="contactForm.status === 'INVALID'">
                             Next
                         </button>
                     </div>
@@ -121,7 +120,7 @@
 
                     <div class="d-flex align-items-center justify-content-between">
                         <button class="form_btn" matStepperPrevious>Back</button>
-                        <button class="form_btn" [disabled]="!acceptParam" matStepperNext>Next</button>
+                        <button class="form_btn" [disabled]="!acceptParam" matStepperNext id="product-submit">Soumettre la commande</button>
                     </div> 
                 </div>
             </mat-step>
@@ -133,6 +132,7 @@
                         <p> 
                             votre commande a été passée avec succès
                         </p>
+                        <button class="btn order_btn" (click)="gotoProduct()">Revenir à la boutique</button>
                     </div>
                    
                 </div>
