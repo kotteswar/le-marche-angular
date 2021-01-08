@@ -207,6 +207,7 @@ footer {
     position: relative;
     top: 180px;
     display: block;
+    background-color: #d4d4d4;
 }
 .footer-address li {
     font-size: 16px;
@@ -221,6 +222,7 @@ footer {
     top: 180px;
     display: block;
     text-align: center;
+    background-color: #d4d4d4;
 }
 ul.footer-links {
     margin-top: 15px;

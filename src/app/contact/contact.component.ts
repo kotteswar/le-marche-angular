@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -36,7 +36,6 @@ export class ContactComponent implements OnInit {
 
   gotoProduct() {
     this.router.navigate(['home']);
-    location.reload();
   }
   goToHome(){
     this.router.navigate(['home']);

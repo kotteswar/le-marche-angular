@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, OnInit,Inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -49,12 +50,45 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  productsCake = [
+    {
+      proName: 'TR Gâteau',
+      img: 'assets/img/products_images/cakes/cake1.PNG'
+    },
+    {
+      proName: 'TR Gâteau',
+      img: 'assets/img/products_images/cakes/cake2.PNG'
+    },
+    {
+      proName: 'TR Gâteau',
+      img: 'assets/img/products_images/cakes/cake3.PNG'
+    },
+    {
+      proName: 'TR Gâteau',
+      img: 'assets/img/products_images/cakes/cake4.PNG'
+    }
+  ];
+
+
   SlideOptions = { items: 4, dots: true, nav: true, navigation: true };
   public istopeValue;
   // CarouselOptions = { items: 3, dots: true, nav: true };
 
-  constructor(private router: Router) { 
+  constructor(private router: Router,@Inject(DOCUMENT) private _document: Document) { 
     this.istopeValue = 'all';
+    let  shoppedItemLength;
+    if(localStorage.getItem('shopped') == null) {
+      shoppedItemLength = 0;
+    }
+    else {
+      shoppedItemLength = JSON.parse(localStorage.getItem('shopped')).length || 0;
+    }
+    
+    if(shoppedItemLength > 0) {
+      localStorage.removeItem("shopped");
+      localStorage.removeItem("totalPrice");
+      this._document.defaultView.location.reload(); 
+    }
   }
 
   ngOnInit() {
@@ -111,6 +145,9 @@ export class HomeComponent implements OnInit {
   
   public goToShopPage() {
     this.router.navigate(['/products']);
+  }
+  public goToShopTRgateau() {
+    location.href = "https://www.facebook.com/TR-g%C3%A2teau-505161249888952/";
   }
 
 

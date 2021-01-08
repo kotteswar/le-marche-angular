@@ -9,7 +9,7 @@
             "sub_name_french": "Pommes",
             "sub_name_eng": "Apple",
             "quantity": "1",
-            "price": "2.99",
+            "price": "3.99",
             "image_url": "img/products_images/Fruits/apple/apple_gala.png",
             "measure_scale": "kg"
         },
@@ -35,7 +35,7 @@
             "sub_name_french": "Pommes",
             "sub_name_eng": "Apple",
             "quantity": "1",
-            "price": "3.95",
+            "price": "2.99",
             "image_url": "img/products_images/fruits/apple/green_apple.png",
             "measure_scale": "kg"
         },
@@ -48,7 +48,7 @@
             "sub_name_french": "Pommes",
             "sub_name_eng": "Apple",
             "quantity": "1",
-            "price": "3.99",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/apple/pinklady_apple.png",
             "measure_scale": "kg"
         },
@@ -87,13 +87,13 @@
             "sub_name_french": "agrumes",
             "sub_name_eng": "cirtus",
             "quantity": "1",
-            "price": "3.99",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/cirtus/orange_lemon.png",
             "measure_scale": "kg"
         },
         {
             "product_id": "1007",
-            "product_name": "Lusar",
+            "product_name": "CLEMENTINE Lusar",
             "english_name": "Lusar",
             "main_category": "fruit",
             "sub_category": "cirtus",
@@ -126,7 +126,7 @@
             "sub_name_french": "agrumes",
             "sub_name_eng": "cirtus",
             "quantity": "1",
-            "price": "1.99",
+            "price": "2.2",
             "image_url": "img/products_images/fruits/cirtus/orange.png",
             "measure_scale": "kg"
         },
@@ -139,7 +139,7 @@
             "sub_name_french": "agrumes",
             "sub_name_eng": "cirtus",
             "quantity": "1",
-            "price": "3.2",
+            "price": "3.9",
             "image_url": "img/products_images/fruits/cirtus/orange_table.png",
             "measure_scale": "kg"
         },
@@ -152,7 +152,7 @@
             "sub_name_french": "agrumes",
             "sub_name_eng": "cirtus",
             "quantity": "1",
-            "price": "50",
+            "price": "1.8",
             "image_url": "img/products_images/fruits/cirtus/pomelo.png",
             "measure_scale": "piece"
         },
@@ -165,7 +165,7 @@
             "sub_name_french": "agrumes",
             "sub_name_eng": "cirtus",
             "quantity": "1",
-            "price": "3.99",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/cirtus/orri.png",
             "measure_scale": "kg"
         },
@@ -191,7 +191,7 @@
             "sub_name_french": "fruits secs",
             "sub_name_eng": "dry fruits",
             "quantity": "1",
-            "price": "12.95",
+            "price": "7.95",
             "image_url": "img/products_images/fruits/dry_fruits/dates.png",
             "measure_scale": "kg"
         },
@@ -308,7 +308,7 @@
             "sub_name_french": "fruits exotiques",
             "sub_name_eng": "exotice fruits",
             "quantity": "1",
-            "price": "13.8",
+            "price": "5.95",
             "image_url": "img/products_images/fruits/exotice_fruits/mini_banana.png",
             "measure_scale": "kg"
         },
@@ -321,7 +321,7 @@
             "sub_name_french": "fruits exotiques",
             "sub_name_eng": "exotice fruits",
             "quantity": "1",
-            "price": "25.95",
+            "price": "8.95",
             "image_url": "img/products_images/fruits/exotice_fruits/passion_fruit.png",
             "measure_scale": "kg"
         },
@@ -340,13 +340,14 @@
         },
         {
             "product_id": "1026",
-            "product_name": "Blanc",
+            "product_name": "RAISIN BLANC",
             "english_name": "Blanc grapes",
             "main_category": "fruit",
             "sub_category": "grapes",
             "sub_name_french": "raisins",
             "sub_name_eng": "grapes",
             "quantity": "1",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/grapes/blanc_grapes.png",
             "measure_scale": "kg"
         },
@@ -359,7 +360,7 @@
             "sub_name_french": "raisins",
             "sub_name_eng": "grapes",
             "quantity": "1",
-            "price": "9.95",
+            "price": "5.99",
             "image_url": "img/products_images/fruits/grapes/seedless_red_grapes.png",
             "measure_scale": "kg"
         },
@@ -372,7 +373,7 @@
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "1",
-            "price": "1.99",
+            "price": "2.2",
             "image_url": "img/products_images/fruits/other_fruits/banana.png",
             "measure_scale": "kg"
         },
@@ -385,26 +386,27 @@
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "1",
+            "price": "12.95",
             "image_url": "img/products_images/fruits/other_fruits/litchi.png",
             "measure_scale": "kg"
         },
         {
             "product_id": "1030",
-            "product_name": "Kiwi",
+            "product_name": " Kiwi Vert",
             "english_name": "Kiwi",
             "main_category": "fruit",
             "sub_category": "other_fruit",
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "3",
-            "price": "4",
+            "price": "1.2",
             "image_url": "img/products_images/fruits/other_fruits/kiwi.png",
             "measure_scale": "piece"
         },
         {
             "product_id": "1031",
             "product_name": "Kiwi jaune",
-            "english_name": "Yellow kiwi",
+            "english_name": "Kiwi Golden",
             "main_category": "fruit",
             "sub_category": "other_fruit",
             "sub_name_french": "autres fruit",
@@ -412,7 +414,7 @@
             "quantity": "1",
             "price": "1.5",
             "image_url": "img/products_images/fruits/other_fruits/yellow_kiwi.png",
-            "measure_scale": "kg"
+            "measure_scale": "Piece"
         },
         {
             "product_id": "1032",
@@ -436,7 +438,7 @@
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "2",
-            "price": "5",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/other_fruits/large_melon.png",
             "measure_scale": "piece"
         },
@@ -477,7 +479,7 @@
             "quantity": "1",
             "price": "3.99",
             "image_url": "img/products_images/fruits/other_fruits/yellow_melon.png",
-            "measure_scale": "kg"
+            "measure_scale": "piece"
         },
         {
             "product_id": "1037",
@@ -508,12 +510,13 @@
         {
             "product_id": "1039",
             "product_name": "Peche plat",
-            "english_name": "Flat peach",
+            "english_name": "peach",
             "main_category": "fruit",
             "sub_category": "other_fruit",
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "1",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/other_fruits/flat_peach.png",
             "measure_scale": "kg"
         },
@@ -526,33 +529,33 @@
             "sub_name_french": "autres fruit",
             "sub_name_eng": "other fruit",
             "quantity": "1",
-            "price": "1.5",
+            "price": "2.2",
             "image_url": "img/products_images/fruits/other_fruits/plantain.png",
             "measure_scale": "kg"
         },
         {
             "product_id": "1041",
             "product_name": "Poiers comice",
-            "english_name": "Pears comice",
+            "english_name": "Comice",
             "main_category": "fruit",
             "sub_category": "pears",
             "sub_name_french": "poiers",
             "sub_name_eng": "pears",
             "quantity": "1",
-            "price": "5.95",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/pears/pears_comice.png",
             "measure_scale": "kg"
         },
         {
             "product_id": "1042",
             "product_name": "poiers conference",
-            "english_name": "Pears conference",
+            "english_name": "conference",
             "main_category": "fruit",
             "sub_category": "pears",
             "sub_name_french": "poiers",
             "sub_name_eng": "pears",
             "quantity": "1",
-            "price": "3.95",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/pears/pears_conference.png",
             "measure_scale": "kg"
         },
@@ -577,9 +580,10 @@
             "sub_category": "red_fruits",
             "sub_name_french": "cerise",
             "sub_name_eng": "red fruits",
-            "quantity": "0",
+            "quantity": "1",
+            "price": "10.99",
             "image_url": "img/products_images/fruits/red_fruits/blackberries.png",
-            "measure_scale": "null"
+            "measure_scale": "500G"
         },
         {
             "product_id": "1045",
@@ -589,9 +593,10 @@
             "sub_category": "red_fruits",
             "sub_name_french": "cerise",
             "sub_name_eng": "red fruits",
-            "quantity": "0",
+            "quantity": "1",
+            "price": "10.99",
             "image_url": "img/products_images/fruits/red_fruits/blueberries.png",
-            "measure_scale": "null"
+            "measure_scale": "500G"
         },
         {
             "product_id": "1046",
@@ -601,9 +606,10 @@
             "sub_category": "red_fruits",
             "sub_name_french": "cerise",
             "sub_name_eng": "red fruits",
-            "quantity": "0",
+            "quantity": "1",
+            "price": "0",
             "image_url": "img/products_images/fruits/red_fruits/gooseberries.png",
-            "measure_scale": "null"
+            "measure_scale": "500G"
         },
         {
             "product_id": "1047",
@@ -613,9 +619,10 @@
             "sub_category": "red_fruits",
             "sub_name_french": "cerise",
             "sub_name_eng": "red fruits",
-            "quantity": "0",
+            "quantity": "1",
+            "price": "8.99",
             "image_url": "img/products_images/fruits/red_fruits/strawberry.png",
-            "measure_scale": "null"
+            "measure_scale": "500G"
         },
         {
             "product_id": "1048",
@@ -625,9 +632,10 @@
             "sub_category": "red_fruits",
             "sub_name_french": "cerise",
             "sub_name_eng": "red fruits",
-            "quantity": "0",
+            "quantity": "1",
+            "price": "8.99",
             "image_url": "img/products_images/fruits/red_fruits/raspberry.png",
-            "measure_scale": "null"
+            "measure_scale": "500G"
         },
         {
             "product_id": "1049",
@@ -677,7 +685,7 @@
             "sub_name_french": "fruits a noyau",
             "sub_name_eng": "stone fruits",
             "quantity": "1",
-            "price": "3.99",
+            "price": "5.99",
             "image_url": "img/products_images/fruits/stone_fruits/apricot.png",
             "measure_scale": "kg"
         },
@@ -690,7 +698,7 @@
             "sub_name_french": "fruits a noyau",
             "sub_name_eng": "stone fruits",
             "quantity": "1",
-            "price": "2.99",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/stone_fruits/yellow_nectarine.png",
             "measure_scale": "kg"
         },
@@ -703,7 +711,7 @@
             "sub_name_french": "fruits a noyau",
             "sub_name_eng": "stone fruits",
             "quantity": "1",
-            "price": "6.95",
+            "price": "4.99",
             "image_url": "img/products_images/fruits/stone_fruits/white_nectarine.png",
             "measure_scale": "kg"
         },
@@ -716,7 +724,7 @@
             "sub_name_french": "choux",
             "sub_name_eng": "cabbage",
             "quantity": "1",
-            "price": "4.95",
+            "price": "4.99",
             "image_url": "img/products_images/vegetables/cabbage/broccoli.png",
             "measure_scale": "kg"
         },
@@ -755,7 +763,7 @@
             "sub_name_french": "choux",
             "sub_name_eng": "cabbage",
             "quantity": "1",
-            "price": "5.95",
+            "price": "2.99",
             "image_url": "img/products_images/vegetables/cabbage/cauliflower.png",
             "measure_scale": "piece"
         },
@@ -775,13 +783,13 @@
         {
             "product_id": "1060",
             "product_name": "Avocat",
-            "english_name": "Avocado",
+            "english_name": "AVOCATS",
             "main_category": "vegetables",
             "sub_category": "fruit_vegetables",
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
-            "price": "1.95",
+            "price": "2.2",
             "image_url": "img/products_images/vegetables/fruit_vegetables/avocado.png",
             "measure_scale": "piece"
         },
@@ -794,7 +802,7 @@
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
-            "price": "9.95",
+            "price": "7.95",
             "image_url": "img/products_images/vegetables/fruit_vegetables/cherry_tomato.png",
             "measure_scale": "kg"
         },
@@ -814,13 +822,13 @@
         {
             "product_id": "1063",
             "product_name": "Concombre",
-            "english_name": "Cucumber",
+            "english_name": "CONCOMBRE",
             "main_category": "vegetables",
             "sub_category": "fruit_vegetables",
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
-            "price": "2.95",
+            "price": "1.95",
             "image_url": "img/products_images/vegetables/fruit_vegetables/cucumber.png",
             "measure_scale": "piece"
         },
@@ -846,7 +854,7 @@
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
-            "price": "23.8",
+            "price": "3.99",
             "image_url": "img/products_images/vegetables/fruit_vegetables/rabelais_grape_tomato.png",
             "measure_scale": "kg"
         },
@@ -872,6 +880,7 @@
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
+            "price": "2.99",
             "image_url": "img/products_images/vegetables/fruit_vegetables/tomato.png",
             "measure_scale": "kg"
         },
@@ -884,7 +893,7 @@
             "sub_name_french": "legumes fruits",
             "sub_name_eng": "fruit vegetables",
             "quantity": "1",
-            "price": "6.95",
+            "price": "3.99",
             "image_url": "img/products_images/vegetables/fruit_vegetables/tomato_torino.png",
             "measure_scale": "kg"
         },
@@ -923,7 +932,7 @@
             "sub_name_french": "pommes de terre",
             "sub_name_eng": "potatoes",
             "quantity": "1",
-            "price": "4.95",
+            "price": "3.95",
             "image_url": "img/products_images/vegetables/potatoes/rattu_du_tuquet.png",
             "measure_scale": "kg"
         },
@@ -936,7 +945,7 @@
             "sub_name_french": "fines herbes",
             "sub_name_eng": "herbs",
             "quantity": "1",
-            "price": "1",
+            "price": "1.8",
             "image_url": "img/products_images/vegetables/herbs/dill.png",
             "measure_scale": "piece"
         },
@@ -949,7 +958,7 @@
             "sub_name_french": "fines herbes",
             "sub_name_eng": "herbs",
             "quantity": "1",
-            "price": "1.5",
+            "price": "1.8",
             "image_url": "img/products_images/vegetables/herbs/basil.png",
             "measure_scale": "piece"
         },
@@ -962,7 +971,7 @@
             "sub_name_french": "fines herbes",
             "sub_name_eng": "herbs",
             "quantity": "1",
-            "price": "1",
+            "price": "1.8",
             "image_url": "img/products_images/vegetables/herbs/chive.png",
             "measure_scale": "piece"
         },
@@ -975,7 +984,7 @@
             "sub_name_french": "fines herbes",
             "sub_name_eng": "herbs",
             "quantity": "1",
-            "price": "1",
+            "price": "1.8",
             "image_url": "img/products_images/vegetables/herbs/corinader.png",
             "measure_scale": "piece"
         },
@@ -1053,7 +1062,7 @@
             "sub_name_french": "legumes feuilles",
             "sub_name_eng": "leaf vegetables",
             "quantity": "1",
-            "price": "5.95",
+            "price": "4.99",
             "image_url": "img/products_images/vegetables/leaf_vegetables/endive.png",
             "measure_scale": "kg"
         },
@@ -1079,7 +1088,7 @@
             "sub_name_french": "legumes feuilles",
             "sub_name_eng": "leaf vegetables",
             "quantity": "1",
-            "price": "4.95",
+            "price": "3.99",
             "image_url": "img/products_images/vegetables/leaf_vegetables/fennel.png",
             "measure_scale": "kg"
         },
@@ -1092,7 +1101,7 @@
             "sub_name_french": "oignons ail",
             "sub_name_eng": "onions garlic",
             "quantity": "1",
-            "price": "8.95",
+            "price": "12.99",
             "image_url": "img/products_images/vegetables/onions_garlic/white_garlic.png",
             "measure_scale": "kg"
         },
@@ -1118,7 +1127,7 @@
             "sub_name_french": "oignons ail",
             "sub_name_eng": "onions garlic",
             "quantity": "1",
-            "price": "2.95",
+            "price": "2.2",
             "image_url": "img/products_images/vegetables/onions_garlic/red_onion.png",
             "measure_scale": "kg"
         },
@@ -1131,7 +1140,7 @@
             "sub_name_french": "oignons ail",
             "sub_name_eng": "onions garlic",
             "quantity": "1",
-            "price": "2.95",
+            "price": "3.95",
             "image_url": "img/products_images/vegetables/onions_garlic/white_onion.png",
             "measure_scale": "kg"
         },
@@ -1144,7 +1153,7 @@
             "sub_name_french": "oignons ail",
             "sub_name_eng": "onions garlic",
             "quantity": "1",
-            "price": "1.95",
+            "price": "2.2",
             "image_url": "img/products_images/vegetables/onions_garlic/yellow_onion.png",
             "measure_scale": "kg"
         },
@@ -1185,7 +1194,7 @@
             "quantity": "1",
             "price": "3.95",
             "image_url": "img/products_images/vegetables/onions_garlic/braided_shallot.png",
-            "measure_scale": "braid"
+            "measure_scale": "botte"
         },
         {
             "product_id": "1092",
@@ -1261,6 +1270,7 @@
             "sub_name_french": "autres legumes",
             "sub_name_eng": "other vegetables",
             "quantity": "1",
+            "price": "9.99",
             "image_url": "img/products_images/vegetables/other_vegetables/okra_ladies_finger.png",
             "measure_scale": "kg"
         },
@@ -1273,6 +1283,7 @@
             "sub_name_french": "autres legumes",
             "sub_name_eng": "other vegetables",
             "quantity": "1",
+            "price": "9.95",
             "image_url": "img/products_images/vegetables/other_vegetables/pea.png",
             "measure_scale": "kg"
         },
@@ -1298,6 +1309,7 @@
             "sub_name_french": "autres legumes",
             "sub_name_eng": "other vegetables",
             "quantity": "1",
+            "price": "4.99",
             "image_url": "img/products_images/vegetables/other_vegetables/rhbard.png",
             "measure_scale": "kg"
         },
@@ -1310,6 +1322,7 @@
             "sub_name_french": "autres legumes",
             "sub_name_eng": "other vegetables",
             "quantity": "1",
+            "price": "9.95",
             "image_url": "img/products_images/vegetables/other_vegetables/green_asparagus.png",
             "measure_scale": "kg"
         },

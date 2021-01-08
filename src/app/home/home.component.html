@@ -30,14 +30,54 @@
           <h3> Le Marché De Garlande </h3>
         </div>
     </div>
+    <div class="carousel-item" (click)="goToShopPage()">
+      <img class="d-block w-100" src="assets/img/spirits1.jpg" alt="Third slide">
+      <div class="carousel-caption">
+          <!-- <h3>Votre source de motivation est l’ingrédient qui peut faire toute la différence</h3> -->
+          <!-- <p>LA is always so much fun!</p> -->
+          <h3> Le Marché De Garlande </h3>
+        </div>
+    </div>
+    <div class="carousel-item" (click)="goToShopPage()">
+      <img class="d-block w-100" src="assets/img/sprits2.jpg" alt="Third slide">
+      <div class="carousel-caption">
+          <!-- <h3>Votre source de motivation est l’ingrédient qui peut faire toute la différence</h3> -->
+          <!-- <p>LA is always so much fun!</p> -->
+          <h3> Le Marché De Garlande </h3>
+        </div>
+    </div>
+    <div class="carousel-item" (click)="goToShopPage()">
+      <img class="d-block w-100" src="assets/img/sprits3.jpg" alt="Third slide">
+      <div class="carousel-caption">
+          <!-- <h3>Votre source de motivation est l’ingrédient qui peut faire toute la différence</h3> -->
+          <!-- <p>LA is always so much fun!</p> -->
+          <h3> Le Marché De Garlande </h3>
+        </div>
+    </div>
+    <div class="carousel-item" (click)="goToShopTRgateau()">
+      <img class="d-block w-100" src="assets/img/cake1.jpg" alt="Third slide">
+      <div class="carousel-caption">
+          <!-- <h3>Votre source de motivation est l’ingrédient qui peut faire toute la différence</h3> -->
+          <!-- <p>LA is always so much fun!</p> -->
+          <h3> TR gâteau </h3>
+        </div>
+    </div>
+    <div class="carousel-item" (click)="goToShopTRgateau()">
+      <img class="d-block w-100" src="assets/img/cake2.jpg" alt="Third slide">
+      <div class="carousel-caption">
+          <!-- <h3>Votre source de motivation est l’ingrédient qui peut faire toute la différence</h3> -->
+          <!-- <p>LA is always so much fun!</p> -->
+          <h3> TR gâteau </h3>
+        </div>
+    </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Précédente</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Suivant</span>
   </a>
 </div>
 
@@ -46,73 +86,27 @@
 <owl-carousel [options]="SlideOptions" [items]="Images" [carouselClasses]="['owl-theme', 'sliding']" >
   <div class="item" (click)="goToShopPage()" *ngFor="let item of products" style="text-align:center;">
     <div style="align-content: center; cursor: pointer;">
-        <img style="height: 300px;width:300px"src={{item.img}}/>
+        <img style="height: 300px;width:300px;border-radius: 150px;"src={{item.img}}/>
         <h4> {{item.proName}} </h4>
     </div>
   </div>
 </owl-carousel>
 </div>
 
-<!-- Featured Products -->
-<section class="portfolio">
- <div class="container">
-     <div class="heading">
-         <h1> Featured Product </h1>
-     </div>
-     <div class="filter-btn">
-        <ul id="buttons">
-            <li [ngClass]="{'active': istopeValue === 'all'}" data-target="all" value="all" (click)="selectIsotop($event)">All</li>
-            <li [ngClass]="{'active': istopeValue === 'fruits'}" data-target="fruits" value="fruits" (click)="selectIsotop($event)">Fruits</li>
-          <li [ngClass]="{'active': istopeValue === 'vegetables'}" data-target="vegetables" value="vegetables" (click)="selectIsotop($event)">Vegetables</li> 
-        </ul>
-     </div>
-     <div class="items">
-        <div class="box" data-id="fruits">
-           <div class="inner" (click)="goToShopPage()">
-              <img src="assets/img/products_images/fruits/cirtus/orri.png" alt="portfolio" />
-           </div>
-        </div>
-        <div class="box" data-id="vegetables">
-          <div class="inner" (click)="goToShopPage()">
-             <img src="assets/img/products_images/vegetables/fruit_vegetables/cherry_tomato.png" alt="portfolio" />
-          </div>
-       </div>
-        <div class="box" data-id="fruits">
-           <div class="inner">
-              <img src="assets/img/products_images/fruits/red_fruits/blueberries.png" alt="portfolio" />
-           </div>
-        </div>
-      <div class="box" data-id="vegetables">
-          <div class="inner" (click)="goToShopPage()">
-             <img src="assets/img/products_images/vegetables/potatoes/yam.png" alt="portfolio" />
-          </div>
+<h1 style="text-align: center;">TR Gâteau</h1>
+
+<div class='container-fluid custom-owl-carousel' style="padding-bottom: 30px">
+  <owl-carousel [options]="SlideOptions" [items]="Images" [carouselClasses]="['owl-theme', 'sliding']" >
+    <div class="item" (click)="goToShopTRgateau()" *ngFor="let item of productsCake" style="text-align:center;">
+      <div style="align-content: center; cursor: pointer;">
+          <img style="height: 300px;width:300px;border-radius: 150px;"src={{item.img}}/>
+          <h4> {{item.proName}} </h4>
       </div>
-        <div class="box" data-id="fruits">
-           <div class="inner" (click)="goToShopPage()">
-              <img src="assets/img/products_images/fruits/red_fruits/gooseberry.png" alt="portfolio" />
-           </div>
-        </div>
-      <div class="box" data-id="vegetables">
-          <div class="inner" (click)="goToShopPage()">
-               <img src="assets/img/products_images/vegetables/herbs/mint.png" alt="portfolio" />
-          </div>
-      </div>
-        <div class="box" data-id="fruits">
-           <div class="inner" (click)="goToShopPage()">
-              <img src="assets/img/products_images/fruits/red_fruits/cherry_red.png" alt="portfolio" />
-           </div>
-        </div>
-       <div class="box" data-id="vegetables">
-        <div class="inner" (click)="goToShopPage()">
-            <img src="assets/img/products_images/vegetables/root_vegetables/pink_radish.png" alt="portfolio" />
-        </div>
-      </div>    
-        
-      
-     
-     </div>
- </div>
-</section>
+    </div>
+  </owl-carousel>
+  </div>
+
+
 
 
 

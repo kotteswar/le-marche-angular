@@ -29,7 +29,7 @@ function sendEmail(userInformation,mailTemplate) {
 	Email.send({
 	Host: "smtp.gmail.com",
 	Username : "lemarchedegarlande007@gmail.com",
-	Password : "lemarche123$",
+	Password : "lemarche007$",
 	To : userInformation.customerEmail,
 	Cc : "lemarchedegarlande007@gmail.com",
 	From : "lemarchedegarlande007@gmail.com",
@@ -38,6 +38,4 @@ function sendEmail(userInformation,mailTemplate) {
 	}).then(
 		console.log("Mail has been successfully sent")
 	);
-	localStorage.removeItem("shopped");
-	localStorage.removeItem("totalPrice");
 }

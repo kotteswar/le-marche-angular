@@ -423,7 +423,7 @@ ol {
 .header__menu ul li {
 	list-style: none;
 	display: inline-block;
-	margin-right: 50px;
+	margin-right: 25px;
 	position: relative;
 }
 
@@ -3540,3 +3540,9 @@ ol {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background-image: url('../src/assets/img/main-bg.jpg');
+    background-repeat:  repeat;
+    background-size: cover;
+}

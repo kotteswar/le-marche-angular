@@ -133,6 +133,7 @@
 .shop_box > img {
     width: 25%;
     border-right: 1px solid #ccc;
+    min-width: 163px;
 }
 
 .shop_box .box_content {

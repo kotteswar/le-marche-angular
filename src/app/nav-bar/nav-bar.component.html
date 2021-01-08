@@ -34,16 +34,19 @@
  <header class="header">
      <div class="container">
          <div class="d-flex align-items-center justify-content-between">
-             <div class="col-lg-3">
+             <div class="col-lg-1 col-xs-3">
                  <div class="header__logo">
                      <a [routerLink]="['/home']"><img src="assets/img/logo.png" alt=""></a>
                  </div>
              </div>
-             <div class="col-lg-6">
+             <div class="col-lg-8 hidden-xs">
+                <marquee><h1 class="grow-title" data-text="Le marche de garlande">Le marche de garlande</h1></marquee>
+            </div>
+             <div class="col-lg-2">
                  <nav class="header__menu">
                      <ul class="d-flex justify-content-end">
-                         <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
-                         <li routerLinkActive="active"><a [routerLink]="['/products']">Shop</a></li>
+                         <li routerLinkActive="active"><a [routerLink]="['/home']">Accueil</a></li>
+                         <li routerLinkActive="active"><a [routerLink]="['/products']">Produits</a></li>
                          <li class="position-relative" (click)="goToShopList('shopped')"> 
                             
                                 <span *ngIf="shoppedLength" class="number-count"> {{shoppedLength}} </span>

@@ -31,6 +31,7 @@
   border-radius: 5px;
   border: 1px solid #f06f30;
   font-size: 16px;
+  margin-left: 10px;
 }
 
 .form_btn:disabled {
@@ -48,10 +49,14 @@
   border: 3px solid #5c9407;
   padding: 15px;
   border-radius: 10px;
+  text-align : center;
 }
 
 .success_msg_container img {
-    width: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
 }
 
 .success_msg_container p {
@@ -109,14 +114,13 @@
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
-  display: -webkit-box;
-  display: flex;
+  display: inline-block;
   align-self: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
   margin: 20px;
-  padding: 1.2em 2.8em;
+  padding: 1.2em 1.5em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -127,4 +131,7 @@
   box-shadow: 0 0 10px 0 #7eac39 inset, 0 0 10px 4px #7eac39;
   color: #7eac39;
 }
-
+.order_btn:focus{ 
+  border: none;
+  outline-color: transparent;
+}
